@@ -1,0 +1,12 @@
+{
+	"name": "resume-compiler",
+	"type": "module",
+	"main": "index.js",
+	"author": "orestis-z",
+	"dependencies": {
+		"html-to-pdfmake": "^2.1.0",
+		"jsdom": "^16.4.0",
+		"pdfmake": "^0.1.68",
+		"showdown": "^1.9.1"
+	}
+}
