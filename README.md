@@ -4,20 +4,22 @@ A resume compiler with Markdown support
 
 [Demo Resume](example/output/Resume_Orestis_Zambounis.pdf)
 
+![alt text](example/output/Resume_Orestis_Zambounis.jpg)
+
 ## Prerequisites
 
-node v12
+`node v12` and `"type": "module"` enabled
 
 ## Install
 
 ```bash
-yarn add https://github.com/orestis-z/compile-resume
+yarn add https://github.com/orestis-z/resume-compiler.git
 ```
 
 ## Example Usage
 
 ```js
-import resumeCompiler, { utils } from "resume-compiler";
+import resumeCompiler, { cvChild } from "resume-compiler";
 
 const profile = {
   name: "Orestis Zambounis",
@@ -35,16 +37,17 @@ const cv = [
     children: [
       cvChild(
         "Experience 1",
-        ["Meta Infos", "Location"],
-        ["From", "To"],
-        "* __Markdown__ description"
+        ["Meta Infos", "Location A"],
+        ["Sep 2010", "Today"],
+        "* Here comes the __Markdown__ description of your achievement"
       ),
       cvChild(
         "Experience 2",
-        ["Meta Infos", "Location"],
-        ["From", "To"],
-        "* __Markdown__ description\n * Achieved more"
+        ["Meta Infos", "Location B"],
+        ["Aug 2005", "Dec 2009"],
+        "* Here's another __Markdown__ description\n * Improved X by Y by doing Z"
       ),
+    ],
   },
   {
     title: "Software Projects",
@@ -53,9 +56,9 @@ const cv = [
         "Personal Website",
         null,
         null,
-        "* Published my personal website with __React.js__ / __Next.js__ and __AWS__ Lambda on <a href='https://leanmind.ch'>www.leanmind.ch</a> (German)",
+        "* Published my personal website with __React.js__ / __Next.js__ and __AWS__ Lambda on <a href='https://leanmind.ch'>www.leanmind.ch</a> (German)"
       ),
-    ]
+    ],
   },
   {
     mini: true,
@@ -63,7 +66,12 @@ const cv = [
     children: [
       cvChild(
         "Languages",
-        ["German (mother tongue)", "English (fluent)", "French (intermediate)", "Italian (beginner)"],
+        [
+          "German (mother tongue)",
+          "English (fluent)",
+          "French (intermediate)",
+          "Italian (beginner)",
+        ],
         null
       ),
       cvChild(
@@ -73,7 +81,7 @@ const cv = [
       ),
     ],
   },
-]
+];
 
 resumeCompiler({
   profile,

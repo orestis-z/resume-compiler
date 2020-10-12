@@ -5,7 +5,7 @@ import PdfPrinter from "pdfmake/src/printer.js";
 import htmlToPdfmake from "html-to-pdfmake";
 import showdown from "showdown";
 import jsdom from "jsdom";
-import * as utils from "./utils.js";
+import { cvChild } from "./utils.js";
 
 const markdownConverter = new showdown.Converter();
 
@@ -272,4 +272,4 @@ export default function resumeCompiler(props) {
   console.log(`Saved to ${path}`);
 }
 
-export { utils };
+export { cvChild };
