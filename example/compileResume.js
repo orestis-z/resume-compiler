@@ -19,10 +19,12 @@ import cv, { profile } from "./cv.js";
 resumeCompiler({
   cv,
   profile,
+  // filePath: "output/Resume_Orestis_Zambounis_tech.pdf",
   // fonts,
   // lineHeight: 0.92,
   // mainTitleSize: 26,
   // subtitleSize: 11,
   // headerSize: 13,
   // fontSize: 9,
+  // unbreakableChildren: true,
 });

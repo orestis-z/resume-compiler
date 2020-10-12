@@ -47,6 +47,7 @@ const DEFAULT_PROPS = {
   fontSize: 10,
   lineHeight: 1,
   pageMargins: PAGE_MARGINS,
+  unbreakableChildren: false,
 };
 
 export default function resumeCompiler(props) {
@@ -63,6 +64,7 @@ export default function resumeCompiler(props) {
     fontSize,
     lineHeight,
     pageMargins,
+    unbreakableChildren,
     filePath,
   } = { ...DEFAULT_PROPS, ...props };
   if (pageCountOn) pageMargins[3] += 20;
@@ -71,64 +73,69 @@ export default function resumeCompiler(props) {
   const largeLineHeight = lineHeight * 1.05;
 
   const getChild = (child, mini, last) => [
-    // child title and subtitles
     {
-      unbreakable: true,
+      unbreakable: unbreakableChildren,
       stack: [
+        // child title and subtitles
         {
-          layout: "noBorders",
-          margin: [0, 2, 0, 0],
-          table: {
-            widths: [PAGE_WIDTH * 0.6, "*"],
-            body: [
-              [
-                {
-                  text: child.title,
-                  bold: true,
-                  font: "childTitleFont",
-                  margin: [0, 0, 0, child.meta ? -4 : -2],
-                },
-                {
-                  text: child.meta ? child.meta.join(" - ") : "",
-                  italics: true,
-                  alignment: "right",
-                  margin: [0, 0, 0, child.meta ? -4 : -2],
-                },
-              ],
-              ...(child.meta ? [[child.subtitles.join(" · "), ""]] : []),
-            ],
-          },
-        },
-        ...(mini
-          ? [
-              {
-                text: child.subtitles && child.subtitles.join(", "),
-                lineHeight: largeLineHeight,
-                margin: [0, 0, 0, child.subtitles ? -2 : 1],
+          unbreakable: true,
+          stack: [
+            {
+              layout: "noBorders",
+              margin: [0, 2, 0, 0],
+              table: {
+                widths: [PAGE_WIDTH * 0.6, "*"],
+                body: [
+                  [
+                    {
+                      text: child.title,
+                      bold: true,
+                      font: "childTitleFont",
+                      margin: [0, 0, 0, child.meta ? -4 : -2],
+                    },
+                    {
+                      text: child.meta ? child.meta.join(" - ") : "",
+                      italics: true,
+                      alignment: "right",
+                      margin: [0, 0, 0, child.meta ? -4 : -2],
+                    },
+                  ],
+                  ...(child.meta ? [[child.subtitles.join(" · "), ""]] : []),
+                ],
               },
-            ]
-          : []),
+            },
+            ...(mini
+              ? [
+                  {
+                    text: child.subtitles && child.subtitles.join(", "),
+                    lineHeight: largeLineHeight,
+                    margin: [0, 0, 0, child.subtitles ? -2 : 1],
+                  },
+                ]
+              : []),
+          ],
+        },
+        // child body
+        ...(mini || !child.body
+          ? []
+          : [
+              [
+                "",
+                htmlToPdfmake(markdownConverter.makeHtml(child.body), {
+                  window,
+                  defaultStyles: {
+                    p: {
+                      margin: [0, 0, 0, 0],
+                    },
+                    ul: { margin: [0, 0, 0, 0] },
+                    a: { color: linkColor },
+                  },
+                }),
+              ],
+            ]),
+        { text: "", margin: [0, 0, 0, child.meta || last ? 9 : 4] },
       ],
     },
-    // child body
-    ...(mini || !child.body
-      ? []
-      : [
-          [
-            "",
-            htmlToPdfmake(markdownConverter.makeHtml(child.body), {
-              window,
-              defaultStyles: {
-                p: {
-                  margin: [0, 0, 0, 0],
-                },
-                ul: { margin: [0, 0, 0, 0] },
-                a: { color: linkColor },
-              },
-            }),
-          ],
-        ]),
-    { text: "", margin: [0, 0, 0, child.meta || last ? 9 : 4] },
   ];
 
   const docDefinition = {
