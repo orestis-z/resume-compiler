@@ -44,7 +44,7 @@ export default [
         "System Control Engineer, Intern",
         ["Rapyuta Robotics · Full-time", "Zurich, Switzerland / Tokyo, Japan"],
         ["Mar 2016", "Feb 2017"],
-        "* Designed a state-of-charge battery estimator with an extended Kalman Filter (EKF)\n* Refactored a model-simulation-framework codebase in __Python__ / __NumPy__\n* Sped up a model-simulation-framework by __550%__ with the creation of <a href='https://github.com/orestis-z/pyjet' target='_blank'>PyJet</a>\n* Created an energy estimator for an arbitrary path followed by a multi-rotor vehicle\n* Improved a setpoint tracking controller for a multi-rotor vehicle implemented in __C++__\n * Leveraged additional knowledge in __Linux__, __Bash__ scripting and __ROS__"
+        "* Designed a state-of-charge battery estimator with an extended Kalman Filter (EKF) using __Python__ and __C++__\n* Sped up a __Python__ / __NumPy__ model-simulation-framework by __550%__ with the creation of <a href='https://github.com/orestis-z/pyjet' target='_blank'>PyJet</a>\n* Created an energy estimator for an arbitrary path followed by a multi-rotor vehicle with __Python__ / __SciPy__\n* Improved a setpoint tracking controller for a multi-rotor vehicle implemented in __C++__\n * Leveraged additional knowledge in __Linux__, __Bash__ scripting and __ROS__"
       ),
     ],
   },

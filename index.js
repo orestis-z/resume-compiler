@@ -70,41 +70,32 @@ export default function resumeCompiler(props) {
   const innerPageWidth = PAGE_WIDTH - (pageMargins[0] + pageMargins[2]);
   const largeLineHeight = lineHeight * 1.05;
 
-  const getChild = (child, mini) => [
+  const getChild = (child, mini, last) => [
     // child title and subtitles
     {
       unbreakable: true,
       stack: [
         {
           layout: "noBorders",
-          margin: [0, 7, 0, 1],
+          margin: [0, 2, 0, 0],
           table: {
-            widths: ["*", "*"],
+            widths: [PAGE_WIDTH * 0.6, "*"],
             body: [
               [
                 {
                   text: child.title,
                   bold: true,
                   font: "childTitleFont",
-                  margin: [0, 0, 0, -4],
+                  margin: [0, 0, 0, child.meta ? -4 : -2],
                 },
                 {
                   text: child.meta ? child.meta.join(" - ") : "",
+                  italics: true,
                   alignment: "right",
-                  margin: [0, 0, 0, -4],
+                  margin: [0, 0, 0, child.meta ? -4 : -2],
                 },
               ],
-              ...(child.meta
-                ? [
-                    [
-                      child.subtitles[0],
-                      {
-                        text: child.subtitles[1],
-                        alignment: "right",
-                      },
-                    ],
-                  ]
-                : []),
+              ...(child.meta ? [[child.subtitles.join(" · "), ""]] : []),
             ],
           },
         },
@@ -137,6 +128,7 @@ export default function resumeCompiler(props) {
             }),
           ],
         ]),
+    { text: "", margin: [0, 0, 0, child.meta || last ? 9 : 4] },
   ];
 
   const docDefinition = {
@@ -173,7 +165,7 @@ export default function resumeCompiler(props) {
                   },
                 ],
                 alignment: "center",
-                margin: [0, -5, 0, 0],
+                margin: [0, -7, 0, 0],
               },
               {
                 stack: [[profile.phone], [profile.email]],
@@ -210,7 +202,11 @@ export default function resumeCompiler(props) {
                   },
                 ],
               },
-              getChild(cvPart.children[0], cvPart.mini),
+              getChild(
+                cvPart.children[0],
+                cvPart.mini,
+                cvPart.children.length == 1
+              ),
             ],
           },
           // rest of children
@@ -218,7 +214,13 @@ export default function resumeCompiler(props) {
             ? [
                 cvPart.children
                   .slice(1, cvPart.children.length)
-                  .map(child => getChild(child, cvPart.mini)),
+                  .map((child, i) =>
+                    getChild(
+                      child,
+                      cvPart.mini,
+                      i == cvPart.children.length - 2
+                    )
+                  ),
               ]
             : []),
         ];
