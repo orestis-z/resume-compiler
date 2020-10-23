@@ -48,6 +48,7 @@ const DEFAULT_PROPS = {
   lineHeight: 1,
   pageMargins: PAGE_MARGINS,
   unbreakableChildren: false,
+  google: false,
 };
 
 export default function resumeCompiler(props) {
@@ -66,6 +67,7 @@ export default function resumeCompiler(props) {
     pageMargins,
     unbreakableChildren,
     filePath,
+    google,
   } = { ...DEFAULT_PROPS, ...props };
   if (pageCountOn) pageMargins[3] += 20;
 
@@ -143,45 +145,80 @@ export default function resumeCompiler(props) {
       // title including personal information
       {
         layout: "noBorders",
-        table: {
-          widths: ["*", innerPageWidth / 2, "*"],
-          body: [
-            [
-              {
-                stack: [
-                  profile.address,
+        table: google
+          ? {
+              widths: ["*", innerPageWidth / 2],
+              body: [
+                [
                   {
-                    text: profile.github,
-                    nodeName: "A",
-                    color: linkColor,
-                    decoration: ["underline"],
-                    style: "html-a",
+                    stack: [
+                      [{ text: profile.name, style: "title" }],
+                      [profile.email],
+                      // profile.programmingLanguages,
+                    ],
+                    lineHeight: largeLineHeight,
+                    fontSize: subtitleSize,
+                  },
+                  {
+                    stack: [
+                      [
+                        {
+                          text: profile.github,
+                          nodeName: "A",
+                          color: linkColor,
+                          decoration: ["underline"],
+                          style: "html-a",
+                          lineHeight: largeLineHeight,
+                        },
+                      ],
+                      [profile.programmingLanguages],
+                    ],
+                    alignment: "right",
+                    fontSize: subtitleSize,
                   },
                 ],
-                lineHeight: largeLineHeight,
-              },
-              {
-                stack: [
+              ],
+            }
+          : {
+              widths: ["*", innerPageWidth / 2, "*"],
+              body: [
+                [
                   {
-                    text: profile.name,
-                    style: "title",
+                    stack: [
+                      profile.address,
+                      {
+                        text: profile.github,
+                        nodeName: "A",
+                        color: linkColor,
+                        decoration: ["underline"],
+                        style: "html-a",
+                      },
+                      // profile.programmingLanguages,
+                    ],
+                    lineHeight: largeLineHeight,
                   },
                   {
-                    text: profile.title,
-                    style: "subtitle",
+                    stack: [
+                      {
+                        text: profile.name,
+                        style: "title",
+                      },
+                      {
+                        text: profile.title,
+                        style: "subtitle",
+                      },
+                    ],
+                    alignment: "center",
+                    margin: [0, -7, 0, 0],
+                  },
+                  {
+                    stack: [[profile.phone], [profile.email]],
+                    alignment: "right",
+                    lineHeight: largeLineHeight,
                   },
                 ],
-                alignment: "center",
-                margin: [0, -7, 0, 0],
-              },
-              {
-                stack: [[profile.phone], [profile.email]],
-                alignment: "right",
-                lineHeight: largeLineHeight,
-              },
-            ],
-          ],
-        },
+              ],
+            },
       },
       // summary
       ...(profile.summary

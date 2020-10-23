@@ -1,6 +1,8 @@
 # Resume Compiler
 
-A resume compiler with Markdown support
+A resume compiler with Markdown support. Converts a JSON serialized resume to PDF format.
+
+Compatible with Google resume guidelines.
 
 [Demo Resume](example/output/Resume_Orestis_Zambounis.pdf)
 
@@ -29,6 +31,8 @@ const profile = {
   phone: "+41 78 637 35 91",
   email: "orestis@leanmind.ch",
   github: "github.com/orestis-z",
+  programmingLanguages:
+    "C++, Python, TensorFlow, Keras, Deep Learning, Computer Vision",
 };
 
 const cv = [
@@ -86,23 +90,25 @@ const cv = [
 resumeCompiler({
   profile,
   cv,
+  google: true,
 });
 ```
 
 ## Config
 
-| Prop                  | description                                                                                                      | default value       |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `profile`             | Object containing personal information `{name, title, address, phone email, github, summary}`                    | `{}`                |
-| `cv`                  | Array containing sections and section-children `[{title, children: [{title, subtitles, meta, body}, ...]}, ...]` | `[]`                |
-| `fonts`               | Absolute path to font files (`ttf` or `woff`)                                                                    | Roboto and OpenSans |
-| `pageCountOn`         | Display page count                                                                                               | `true`              |
-| `color`               | Font color                                                                                                       | `#212121`           |
-| `linkColor`           | Link font color                                                                                                  | `#212121`           |
-| `mainTitleSize`       | Size of main document title                                                                                      | `24`                |
-| `subtitleSize`        | Size of main document subtitle                                                                                   | `12`                |
-| `headerSize`          | Size of the section headers                                                                                      | `13`                |
-| `fontSize`            | Body text font size                                                                                              | `10`                |
-| `lineHeight`          | Body text line height                                                                                            | `1`                 |
-| `unbreakableChildren` | Don't allow children to break to new page                                                                        | `false`             |
-| `pageMargins`         | Document page margins                                                                                            | `[60, 65, 60, 65]`  |
+| Prop                  | description                                                                                                         | default value       |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `profile`             | Object containing personal information `{name, title, address, phone email, github, programmingLanguages, summary}` | `{}`                |
+| `cv`                  | Array containing sections and section-children `[{title, children: [{title, subtitles, meta, body}, ...]}, ...]`    | `[]`                |
+| `fonts`               | Absolute path to font files (`ttf` or `woff`)                                                                       | Roboto and OpenSans |
+| `pageCountOn`         | Display page count                                                                                                  | `true`              |
+| `color`               | Font color                                                                                                          | `#212121`           |
+| `linkColor`           | Link font color                                                                                                     | `#212121`           |
+| `mainTitleSize`       | Size of main document title                                                                                         | `24`                |
+| `subtitleSize`        | Size of main document subtitle                                                                                      | `12`                |
+| `headerSize`          | Size of the section headers                                                                                         | `13`                |
+| `fontSize`            | Body text font size                                                                                                 | `10`                |
+| `lineHeight`          | Body text line height                                                                                               | `1`                 |
+| `unbreakableChildren` | Don't allow children to break to new page                                                                           | `false`             |
+| `pageMargins`         | Document page margins                                                                                               | `[60, 65, 60, 65]`  |
+| `google`              | Google style resume                                                                                                 | `false`             |
