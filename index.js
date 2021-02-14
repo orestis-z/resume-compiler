@@ -102,7 +102,17 @@ export default function resumeCompiler(props) {
                       margin: [0, 0, 0, child.meta ? -4 : -2],
                     },
                   ],
-                  ...(child.meta ? [[child.subtitles.join(" · "), ""]] : []),
+                  ...(child.meta
+                    ? [
+                        [
+                          {
+                            colSpan: 2,
+                            text: child.subtitles.join(" · "),
+                          },
+                          "",
+                        ],
+                      ]
+                    : []),
                 ],
               },
             },

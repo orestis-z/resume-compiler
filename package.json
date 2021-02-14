@@ -7,6 +7,8 @@
 	"dependencies": {
 		"html-to-pdfmake": "^2.1.0",
 		"jsdom": "^16.4.0",
+		"merge-img": "^2.1.3",
+		"pdf2pic": "^2.1.4",
 		"pdfmake": "^0.1.68",
 		"showdown": "^1.9.1"
 	}

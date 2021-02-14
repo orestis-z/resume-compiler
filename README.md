@@ -4,9 +4,11 @@ A resume compiler with Markdown support. Converts a JSON serialized resume to PD
 
 Compatible with Google resume guidelines.
 
-[Demo Resume](example/output/Resume_Orestis_Zambounis.pdf)
+[Demo Resume](docs/Resume_Orestis_Zambounis.pdf)
 
-![alt text](example/output/Resume_Orestis_Zambounis.jpg)
+<kbd>
+  <img src="docs/Resume_Orestis_Zambounis.png">
+</kbd>
 
 ## Prerequisites
 
@@ -19,6 +21,14 @@ yarn add https://github.com/orestis-z/resume-compiler.git
 ```
 
 ## Example Usage
+
+Run the following command to generate an example resume:
+
+```
+node example/compileResume.js
+```
+
+Example code:
 
 ```js
 import resumeCompiler, { cvChild } from "resume-compiler";
