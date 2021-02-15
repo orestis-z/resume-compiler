@@ -26,13 +26,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install graphicsmagick
 
-      - name: Build Demo Docs
-        uses: nick-invision/retry@v2
-        with:
-          timeout_minutes: 1
-          max_attempts: 3
-          retry_on: error
-          command: bash scripts/build-demo.sh
+      - name: Build demo docs
+        run: bash scripts/build-demo.sh
 
       - name: Commit files
         run: |
