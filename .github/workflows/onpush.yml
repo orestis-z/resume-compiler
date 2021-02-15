@@ -1,0 +1,45 @@
+name: Build Pipeline
+on: push
+jobs:
+  build-demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+
+      - uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+
+      - name: Build Demo Docs
+        run: |
+          node example/compileResumeExtended.js
+          cp output/* docs/
+
+      - name: Commit files
+        run: |
+          git diff
+          CHANGED=$(git diff-index HEAD --)
+          if [ -z "$CHANGED" ]; then
+              echo "Nothing has changed"
+              exit 0
+          fi
+          EMAIL=$(git show -s --format='%ae' `git rev-parse HEAD`)
+          NAME=$(git show -s --format='%an' `git rev-parse HEAD`)
+          git config --global init.defaultBranch main
+          git config --local user.email "$EMAIL"
+          git config --local user.name "$NAME"
+          git add docs/
+          git commit -m "Update docs"
+          git push
+        shell: bash
