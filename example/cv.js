@@ -31,7 +31,7 @@ export default [
         "* Lead the creation of the data processing infrastructure using __Databricks__, __PySpark__ and CI/CD pipelines\n* Leveraged additional knowledge in __MLflow__, __Azure__, __Docker__ and __Kubernetes__"
       ),
       cvChild(
-        "Full-Stack Engineer w/ Machine Learning",
+        "Full-Stack / ML Engineer",
         ["LeanMind · Self-employed", "Basel, Switzerland / Global"],
         ["Jul 2019", "May 2020"],
         "* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces leading to an __18%__ higher prediction accuracy compared to the state-of-the-art\n* Developed a frontend using __Cordova__, __React Native__, __React.js__ and __Electron__ to support mobile, web and desktop apps with one code-base\n* Developed a backend composed of four scalable microservices with __Python__ / __Flask__ and __PostgreSQL__, and deployed it to __AWS__ OpsWorks"
