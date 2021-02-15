@@ -1,5 +1,7 @@
 # Resume Compiler
 
+![Build Pipeline](https://github.com/orestis-z/resume-compiler/workflows/Build%20Pipeline/badge.svg)
+
 A resume compiler with Markdown support. Converts a JSON serialized resume to PDF format.
 
 Compatible with Google resume guidelines.
