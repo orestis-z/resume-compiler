@@ -14,6 +14,6 @@ const options = {
 };
 pdf2pic.fromPath(`output/${name}.pdf`, options).bulk(-1);
 const imgPath = `output/${name}.png`;
-mergeImg([`output/${name}.1.png`, `output/${name}.2.png`]).then(img =>
-  img.write(imgPath, () => console.log(`Saved to ${imgPath}`))
-);
+mergeImg([`output/${name}.1.png`, `output/${name}.2.png`])
+  .then(img => img.write(imgPath, () => console.log(`Saved to ${imgPath}`)))
+  .catch(() => process.exit(1));
