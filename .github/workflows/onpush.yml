@@ -27,9 +27,12 @@ jobs:
           sudo apt-get install graphicsmagick
 
       - name: Build Demo Docs
-        run: |
-          node example/compileResumeExtended.js
-          cp output/* docs/
+        uses: nick-invision/retry@v2
+        with:
+          timeout_minutes: 1
+          max_attempts: 3
+          retry_on: error
+          command: bash scripts/build-demo.sh
 
       - name: Commit files
         run: |
