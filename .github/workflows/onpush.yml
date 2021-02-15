@@ -23,10 +23,8 @@ jobs:
 
       - name: Install graphics libraries
         run: |
-          sudo add-apt-repository ppa:dhor/myway
           sudo apt-get update
           sudo apt-get install graphicsmagick
-          sudo apt-get install imagemagick
 
       - name: Build Demo Docs
         run: |
