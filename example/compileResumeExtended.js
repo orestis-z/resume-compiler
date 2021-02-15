@@ -1,3 +1,4 @@
+import fs from "fs";
 import pdf2pic from "pdf2pic";
 import mergeImg from "merge-img";
 import "./compileResume.js";
@@ -12,6 +13,7 @@ const options = {
   width: 2480 * SCALE,
   height: 3508 * SCALE,
 };
+if (!fs.existsSync("output")) fs.mkdirSync("output");
 pdf2pic.fromPath(`output/${name}.pdf`, options).bulk(-1);
 const imgPath = `output/${name}.png`;
 mergeImg([`output/${name}.1.png`, `output/${name}.2.png`])

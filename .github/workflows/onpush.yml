@@ -21,7 +21,7 @@ jobs:
         with:
           cmd: install
 
-      - name: Install graphics libraries
+      - name: Install graphicsmagick
         run: |
           sudo apt-get update
           sudo apt-get install graphicsmagick
