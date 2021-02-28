@@ -76,7 +76,7 @@ export default [
         "ETH Zurich",
         ["BSc Mechanical Engineering (5.51/6.0)", "Zurich, Switzerland"],
         ["Sep 2012", "Feb 2016"],
-        "Bachelor’s thesis (5.75/6.0):\n* Synthesised non-linear attitude control algorithms and a Kalman filter using __C++__ and __MATLAB__ / __Simulink__"
+        "* Graduated with two standard deviations above the average\n\nBachelor’s thesis (5.75/6.0):\n* Synthesised non-linear attitude control algorithms and a Kalman filter using __C++__ and __MATLAB__ / __Simulink__"
       ),
     ],
   },
