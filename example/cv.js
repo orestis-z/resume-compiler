@@ -28,7 +28,7 @@ export default [
         "Machine Learning Engineer",
         ["benshi.ai · Full-time", "Barcelona, Catalonia"],
         ["Nov 2020", "Present"],
-        "* Lead the creation of the data processing infrastructure using __Databricks__, __PySpark__ and CI/CD pipelines\n* Managed the lifecycle of ML models using MLOps practices\n* Leveraged additional knowledge in __Pandas__, __MLflow__, __Azure__, __Docker__ and __Kubernetes__"
+        "* Lead the creation of the data processing infrastructure using __Databricks__, __PySpark__ and CI/CD pipelines\n* Managed the lifecycle of machine learning models using MLOps practices and __MLflow__\n* Leveraged additional knowledge in __Pandas__, __Azure__, __Docker__ and __Kubernetes__"
       ),
       cvChild(
         "Full-Stack / ML Engineer",
