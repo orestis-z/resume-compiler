@@ -42,12 +42,12 @@ export default [
         ["Jan 2018", "Apr 2019"],
         "* Launched a mobile app with __OpenGL__ / __libGDX__, __Java__ / __Android__ and __React Native__\n* Created product specifications, hired and managed a team of five frontend and backend developers\n* Passed the first Venture Kick stage raising CHF 10k, gained entrepreneurial insights into company founding, business planning, intellectual property, accounting and strategic decision-making"
       ),
-      cvChild(
-        "Mobile App Developer (side job)",
-        ["nextron internet team · Part-time", "Basel, Switzerland"],
-        ["Sep 2017", "Aug 2018"],
-        "* Developed and released a cross-platform mobile app with __React Native__ leading to 2,000+ downloads and 5-star rating"
-      ),
+//       cvChild(
+//         "Mobile App Developer (side job)",
+//         ["nextron internet team · Part-time", "Basel, Switzerland"],
+//         ["Sep 2017", "Aug 2018"],
+//         "* Developed and released a cross-platform mobile app with __React Native__ leading to 2,000+ downloads and 5-star rating"
+//       ),
       cvChild(
         "System Control Engineer, Intern",
         ["Rapyuta Robotics · Full-time", "Zurich, Switzerland / Tokyo, Japan"],
