@@ -34,7 +34,7 @@ export default [
         "Full-Stack / ML Engineer, Digital Marketer",
         ["Self-employed", "Basel, Switzerland / Global"],
         ["Jun 2019", "May 2020"],
-        "* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces leading to an __18%__ higher prediction accuracy compared to the state-of-the-art\n* Developed a cross-platform frontend using __Cordova__, __React Native__, __React.js__ and __Electron__\n* Developed a backend composed of microservices with __Python__ / __Flask__ and __PostgreSQL__, and deployed it to __AWS__\n* Generated leads by blogging, facebook & google ads, and email campaigns"
+        "* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces leading to an __18%__ higher prediction accuracy compared to the state-of-the-art\n* Developed a cross-platform frontend using __Cordova__, __React Native__, __React.js__ and __Electron__\n* Developed a microservice architecture with __Python__ / __Flask__ and __PostgreSQL__, and deployed it to __AWS__\n* Generated leads by blogging, facebook & google ads, and email campaigns"
       ),
       cvChild(
         "Co-Founder, Technical Lead",
