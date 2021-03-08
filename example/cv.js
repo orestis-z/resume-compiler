@@ -82,7 +82,7 @@ export default [
   },
 
   {
-    title: "Software Projects",
+    title: "Projects",
     children: [
       cvChild(
         "PyJET – compiling NumPy",
