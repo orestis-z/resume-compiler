@@ -40,7 +40,7 @@ export default [
         "Co-Founder, Technical Lead",
         ["Kimata Networks · Full-time", "Basel, Switzerland"],
         ["Jan 2018", "Apr 2019"],
-        "* Launched a mobile app with __OpenGL__ / __libGDX__, __Java__ / __Android__ and __React Native__\n* Created product specifications, hired and managed a team of five frontend and backend developers\n* Passed the first Venture Kick stage raising CHF 10k, gained entrepreneurial insights into company founding, business planning, intellectual property, accounting and strategic decision-making"
+        "* Launched a mobile app with __OpenGL__ / __libGDX__, __Java__ / __Android__ and __React Native__\n* Created product specifications, hired and managed a team of five frontend and backend developers\n* Passed the first Venture Kick stage raising CHF 10k, gained entrepreneurial insights into company founding, business planning, intellectual property, outsourcing, accounting and strategic decision-making"
       ),
 //       cvChild(
 //         "Mobile App Developer (side job)",
