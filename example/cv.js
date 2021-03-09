@@ -88,7 +88,7 @@ export default [
         "PyJET – compiling NumPy",
         null,
         null,
-        "* Achieved an up to __55x__ speedup of __Python__ code by converting __NumPy__ operations to performant __C++__\n * Co-authored and open-sourced the Python package <a href='https://github.com/orestis-z/pyjet'>PyJET</a>"
+        "* Achieved an up to __55x__ speedup of __Python__ code by converting __NumPy__ operations to performant __C++__\n * Co-created and open-sourced the Python package <a href='https://github.com/orestis-z/pyjet'>PyJET</a>"
       ),
       // cvChild(
       //   "Personal Website",
