@@ -70,7 +70,7 @@ export default [
         "ETH Zurich",
         ["MSc Robotics, Systems & Control (5.25/6.0)", "Zurich, Switzerland"],
         ["Feb 2017", "Jun 2019"],
-        "Semester thesis (5.75/6.0):\n* Showed that an additional depth input channel improves the instance segmentation accuracy of Mask R-CNN by __31%__\n* Submitted the paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__ and __Python__"
+        "Semester thesis (5.75/6.0):\n* Showed that an additional depth input channel improves the segmentation accuracy of Mask R-CNN by __31%__\n* Submitted the paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__ and __Python__"
       ),
       cvChild(
         "ETH Zurich",
