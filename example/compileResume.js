@@ -16,15 +16,18 @@ const fonts = {
   },
 };
 
+const factor = 0.77
+
 resumeCompiler({
   cv,
   profile,
   fonts,
   lineHeight: 0.92,
-  mainTitleSize: 23,
-  subtitleSize: 11,
-  headerSize: 13,
-  fontSize: 9,
+  mainTitleSize: 22,
+  subtitleSize: 10,
+  headerSize: 12.4,
+  fontSize: 8.75,
+  pageMargins: [60 * factor, 60 * factor, 60 * factor, 60 * factor],
   unbreakableChildren: true,
   google: true,
 });

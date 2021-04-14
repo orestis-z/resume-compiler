@@ -6,10 +6,10 @@ export const profile = {
   birthdate: "10.7.1991",
   address: "CH-4103 Bottmingen",
   phone: "+41 78 637 35 91",
-  email: "me@orestisz.com",
-  github: "github.com/orestis-z",
+  email: "[me@orestisz.com](mailto:me@orestisz.com)",
+  // github: "github.com/orestis-z",
   programmingLanguages:
-    "C++, Python, Machine Learning, Computer Vision, Data Engineering, Cloud Infrastructure",
+    "[github.com/orestis-z](https://github.com/orestis-z), [linkedin.com/in/orestis-z](https://linkedin.com/in/orestis-z)\n\nC++, Python, Machine Learning, Robotics, Computer Vision, Cloud Infrastructure",
   // summary:
   //   "MSc ETH robotics engineer with a solid programming background, strong analytical skills and good communication capabilities. I am result driven, pay attention to details and always up to learn new technologies and tools.",
 };
@@ -20,39 +20,39 @@ export default [
     children: [
       // cvChild(
       //   "Web Application Developer (civil service)",
-      //   ["Kantonsspital St Gallen · Full-time", "St. Gallen, Switzerland"],
+      //   ["Kantonsspital St Gallen", "Full-time", "St. Gallen, Switzerland"],
       //   ["May 2020", "Jul 2020"],
       //   "* Added new features to a frontend website with __Vue.js__ following integration testing with __TestCafe__"
       // ),
       cvChild(
-        "Machine Learning Engineer",
-        ["benshi.ai · Full-time", "Barcelona, Catalonia"],
+        "Machine Learning Infrastructure Engineer",
+        ["[benshi.ai](https://benshi.ai) (Funded by [Bill & Melinda Gates Foundation](https://www.gatesfoundation.org/))", "Full-time", "Barcelona, Spain"],
         ["Nov 2020", "Present"],
-        "* Lead the creation of the data processing infrastructure using __Databricks__, __PySpark__ and CI/CD pipelines\n* Leveraged additional knowledge in __MLflow__, __Azure__, __Docker__ and __Kubernetes__"
+        "* Lead the creation of the data processing infrastructure with __Databricks__, __Python__, __Spark__ and CI/CD pipelines\n* Switched my role, onboarded and lead a new engineer to hit a crucial milestone that secured __$X million__ in funding\n* Managed the lifecycle of machine learning models using __MLflow__ and contributed to the experimental testing platform\n* Gained experience in conducting interviews, __Pandas__, __Azure__, __Docker__, __Kubernetes__, __Vue.js__, ETL and statistical modeling"
       ),
       cvChild(
-        "Full-Stack Engineer w/ Machine Learning",
-        ["LeanMind · Self-employed", "Basel, Switzerland / Global"],
-        ["Jul 2019", "May 2020"],
-        "* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces leading to an __18%__ higher prediction accuracy compared to the state-of-the-art\n* Developed a frontend using __Cordova__, __React Native__, __React.js__ and __Electron__ to support mobile, web and desktop apps with one code-base\n* Developed a backend composed of four scalable microservices with __Python__ / __Flask__ and __PostgreSQL__, and deployed it to __AWS__ OpsWorks"
+        "Full-Stack / ML Engineer, Digital Marketer",
+        ["Self-employed", "Basel, Switzerland / Global"],
+        ["Feb 2019", "May 2020"],
+        "* Created a cloud-based and AI-powered app end-to-end, from digital product design to development and marketing\n* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces improving the state-of-the-art accuracy by __18%__ and productionised the model for real-time inference\n* Developed a cross-platform frontend using __Cordova__, __React Native__, __React.js__ and __Electron__, and deployed a scalable microservice architecture to __AWS__ based on __Python__ / __Flask__, __PostgreSQL__ and proxy services\n* Generated leads by blogging, facebook & google ads, SEO and email campaigns, and leveraged knowledge in branding, marketing funnels, subscription-based pricing and data-driven optimisations"
       ),
       cvChild(
-        "Co-Founder, Technical Lead",
-        ["Kimata Networks · Full-time", "Basel, Switzerland"],
+        "Co-Founder, Product Manager & Tech Lead",
+        ["Kimata Networks", "Full-time", "Basel, Switzerland"],
         ["Jan 2018", "Apr 2019"],
-        "* Launched a mobile app with __OpenGL__ / __libGDX__, __Java__ / __Android__ and __React Native__\n* Created product specifications, hired and managed a team of five frontend and backend developers\n* Passed the first Venture Kick stage raising CHF 10k, gained entrepreneurial insights into company founding, business planning, intellectual property, accounting and strategic decision-making"
+        "* Created specifications and roadmaps for a digital product, hired and managed an agile team of five frontend and backend developers, iterated on user feedback, analysed the competitive landscape\n* Passed the first Venture Kick stage raising CHF 10k, gained entrepreneurial insights into company founding, business planning, pivoting, intellectual property, outsourcing, accounting, strategic decision-making and marketing\n* Lead the development of a mobile app with __OpenGL__ / __libGDX__, __Java__ / __Android__ and __React Native__"
       ),
-      cvChild(
-        "Mobile App Developer (side job)",
-        ["nextron internet team · Part-time", "Basel, Switzerland"],
-        ["Sep 2017", "Aug 2018"],
-        "* Developed and released a cross-platform mobile app with __React Native__ leading to 2,000+ downloads and 5-star rating"
-      ),
+//       cvChild(
+//         "Mobile App Developer (side job)",
+//         ["nextron internet team", "Part-time", "Basel, Switzerland"],
+//         ["Sep 2017", "Aug 2018"],
+//         "* Developed and released a cross-platform mobile app with __React Native__ leading to 2,000+ downloads and 5-star rating"
+//       ),
       cvChild(
         "System Control Engineer, Intern",
-        ["Rapyuta Robotics · Full-time", "Zurich, Switzerland / Tokyo, Japan"],
+        ["[Rapyuta Robotics](https://www.rapyuta-robotics.com/) ([ETH Zurich](https://ethz.ch/) Spin-off)", "Full-time", "Tokyo, Japan / Zurich, Switzerland"],
         ["Mar 2016", "Feb 2017"],
-        "* Sped up a __Python__ / __NumPy__ model-simulation-framework by __550%__ with the creation of <a href='https://github.com/orestis-z/pyjet' target='_blank'>PyJet</a>\n* Designed energy estimators for a multicopter with Kalman Filters (EKF) using __Python__,  __SciPy__ and __C++__ \n* Improved a setpoint tracking controller and conducted sensor tests for a multicopter using __C++__ and __Python__\n * Leveraged additional knowledge in __ROS__, __Linux__, __Bash__ scripting, __Git__ and authentication servers"
+        "* Achieved a __55x__ speedup of __NumPy__-heavy model simulation iterations, and open-sourced the __Python__ package <a href='https://github.com/orestis-z/pyjet' target='_blank'>PyJet</a>\n* Designed energy estimators for a multicopter with Kalman Filters (EKF) using __Python__,  __SciPy__ and __C++__ \n* Improved a setpoint tracking controller and conducted sensor tests for a multicopter using __C++__ and __Python__\n * Leveraged additional knowledge in program optimisation, __ROS__, __Linux__, __Bash__ scripting, __Git__ and authentication servers"
       ),
     ],
   },
@@ -61,99 +61,104 @@ export default [
     title: "Education",
     children: [
       cvChild(
-        "Imperial College London",
-        ["Master's Thesis Exchange", "London, United Kingdom"],
+        "[Imperial College London](https://www.imperial.ac.uk/dyson-robotics-lab)",
+        ["Master's Thesis", "London, United Kingdom"],
         ["Aug 2018", "Jun 2019"],
-        "* Pioneered a multi-task CNN deep learning architecture that predicts object instances, human poses, instance masks and tracks people end-to-end\n* Implemented the CNN using __Caffe2__ and __Python__ including custom operators with __CUDA C/C++__"
+        "* Laid a solid step stone for generating arbitrarily large 3D human pose datasets for human motion prediction\n* Pioneered a multi-task CNN deep learning architecture that predicts object instances, human poses, instance masks and tracks people end-to-end\n* Implemented the CNN using __Caffe2__ and __Python__ including custom operators with __CUDA C/C++__"
       ),
       cvChild(
-        "ETH Zurich",
+        "[ETH Zurich](https://master-robotics.ethz.ch/)",
         ["MSc Robotics, Systems & Control (5.25/6.0)", "Zurich, Switzerland"],
         ["Feb 2017", "Jun 2019"],
-        "Semester thesis (5.75/6.0):\n* Showed that an additional depth input channel improves the instance segmentation accuracy of Mask R-CNN by up to __31%__\n* Submitted the paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__ and __Python__"
+        "Semester thesis (5.75/6.0):\n\n* Introduced a method to boost the scene understanding for robotic systems equipped with RGB-D sensors\n* Showed that an additional depth input channel can improve the segmentation accuracy of Mask R-CNN by __31%__\n* Submitted a paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__ and __Python__"
       ),
       cvChild(
-        "ETH Zurich",
+        "[ETH Zurich](https://mavt.ethz.ch/)",
         ["BSc Mechanical Engineering (5.51/6.0)", "Zurich, Switzerland"],
         ["Sep 2012", "Feb 2016"],
-        "Bachelor’s thesis (5.75/6.0):\n* Synthesised non-linear attitude control algorithms and a Kalman filter using __C++__ and __MATLAB__ / __Simulink__"
+        "* Graduated with more than two standard deviations above the average (top __5%__)\n\nBachelor’s thesis (5.75/6.0):\n* Implemented balancing manoeuvres for the [Omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) to demonstrate its six degrees of freedom flying versatility\n* Synthesised non-linear attitude control algorithms and a Kalman filter using __C++__ and __MATLAB__ / __Simulink__"
       ),
     ],
   },
 
-  {
-    title: "Software Projects",
-    children: [
-      cvChild(
-        "PyJET – compiling NumPy",
-        null,
-        null,
-        "* Achieved an up to __55x__ speedup of __Python__ code by converting __NumPy__ operations to performant __C++__\n * Co-authored and open-sourced the Python package <a href='https://github.com/orestis-z/pyjet'>PyJET</a>"
-      ),
-      // cvChild(
-      //   "Personal Website",
-      //   null,
-      //   null,
-      //   "* Published my professional website with __React.js__ / __Next.js__ and __AWS__ Lambda on <a href='https://leanmind.ch'>www.leanmind.ch</a> (German)"
-      // ),
-      cvChild(
-        "Mobile Apps",
-        null,
-        null,
-        "* Created multiple mini mobile apps with __React Native__ and __Cordova__ published them on the <a href='https://play.google.com/store/apps/developer?id=LeanMind'>Google Play Store</a>"
-      ),
-      cvChild(
-        "Resume Compiler",
-        null,
-        null,
-        "* Open-sourced a resume compiler using __Node.js__ at <a href='https://github.com/orestis-z/resume-compiler'>github.com/orestis-z/resume-compiler</a>"
-      ),
-    ],
-  },
-  {
-    mini: true,
-    title: "Other",
-    children: [
-      // cvChild(
-      //   "Skills",
-      //   [
-      //     "Python",
-      //     "C++",
-      //     "Computer Vision",
-      //     "Deep Learning",
-      //     "Program Optimization",
-      //     "Parallel Computing",
-      //     "TensorFlow",
-      //     "Keras",
-      //     "Caffe2",
-      //     "CUDA C/C++",
-      //     "OpenGL",
-      //     "NumPY",
-      //     "SciPy",
-      //     "scikit-learn",
-      //     "Java",
-      //     "AWS",
-      //     "SQL",
-      //   ],
-      //   null
-      // ),
-      cvChild(
-        "Languages",
-        [
-          "German (mother tongue)",
-          "Greek (mother tongue)",
-          "English (fluent)",
-          "French (intermediate)",
-          "Spanish (beginner)",
-          "Italian (beginner)",
-        ],
-        null
-      ),
-      cvChild(
-        "Hobbies",
-        ["Rock climbing", "Saxophone", "Programming", "Traveling"],
-        null
-      ),
-    ],
-  },
+//   {
+//     title: "Projects",
+//     children: [
+//       cvChild(
+//         "Program Optimisation with PyJET",
+//         null,
+//         null,
+//         "* Achieved a __55x__ speedup of math-heavy __Python__ code by converting __NumPy__ operations to performant __C++__\n * Co-created and open-sourced the Python package <a href='https://github.com/orestis-z/pyjet'>PyJET</a> under an MIT License"
+//       ),
+//       // cvChild(
+//       //   "Personal Website",
+//       //   null,
+//       //   null,
+//       //   "* Published my professional website with __React.js__ / __Next.js__ and __AWS__ Lambda on <a href='https://leanmind.ch'>www.leanmind.ch</a> (German)"
+//       // ),
+//       cvChild(
+//         "Mobile Apps",
+//         null,
+//         null,
+//         "* Created entertaining mobile apps with __React Native__ and __Cordova__, and published them on the <a href='https://play.google.com/store/apps/developer?id=LeanMind'>Play Store</a>"
+//       ),
+//       // cvChild(
+//       //  "Resume Compiler",
+//       //  null,
+//       //  null,
+//       //  "* Open-sourced a resume compiler using __Node.js__ at <a href='https://github.com/orestis-z/resume-compiler'>github.com/orestis-z/resume-compiler</a>"
+//       // ),
+//     ],
+//   },
+  // {
+  //   mini: true,
+  //   title: "Other",
+  //   children: [
+  //     // cvChild(
+  //     //   "Skills",
+  //     //   [
+  //     //     "Python",
+  //     //     "C++",
+  //     //     "Computer Vision",
+  //     //     "Deep Learning",
+  //     //     "Program Optimization",
+  //     //     "Parallel Computing",
+  //     //     "TensorFlow",
+  //     //     "Keras",
+  //     //     "Caffe2",
+  //     //     "CUDA C/C++",
+  //     //     "OpenGL",
+  //     //     "NumPY",
+  //     //     "SciPy",
+  //     //     "scikit-learn",
+  //     //     "Java",
+  //     //     "AWS",
+  //     //     "SQL",
+  //     //   ],
+  //     //   null
+  //     // ),
+  //     cvChild(
+  //       "Languages",
+  //       [
+  //         "German (mother tongue)",
+  //         "Greek (mother tongue)",
+  //         "English (fluent)",
+  //         "French (intermediate)",
+  //         "Spanish (beginner)",
+  //         "Italian (beginner)",
+  //       ],
+  //       null
+  //     ),
+  //     cvChild(
+  //       "Hobbies",
+  //       ["Rock climbing", "Saxophone", "Programming", "Traveling"],
+  //       null
+  //     ),
+  //     // cvChild(
+  //     //   "Links",
+  //     //   ["[linkedin.com/in/orestis-z](https://linkedin.com/in/orestis-z)", "[github.com/orestis-z](https://github.com/orestis-z)", "[me@orestisz.com](mailto:me@orestisz.com)"],
+  //     //   null
+  //     // ),
+  //   ],
+  // },
 ];

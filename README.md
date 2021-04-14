@@ -113,7 +113,7 @@ resumeCompiler({
 | `profile`             | Object containing personal information `{name, title, address, phone email, github, programmingLanguages, summary}` | `{}`                |
 | `cv`                  | Array containing sections and section-children `[{title, children: [{title, subtitles, meta, body}, ...]}, ...]`    | `[]`                |
 | `fonts`               | Absolute path to font files (`ttf` or `woff`)                                                                       | Roboto and OpenSans |
-| `pageCountOn`         | Display page count                                                                                                  | `true`              |
+| `pageCountOn`         | Display page count                                                                                                  | `false`              |
 | `color`               | Font color                                                                                                          | `#212121`           |
 | `linkColor`           | Link font color                                                                                                     | `#212121`           |
 | `mainTitleSize`       | Size of main document title                                                                                         | `24`                |

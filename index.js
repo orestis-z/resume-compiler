@@ -38,7 +38,7 @@ const DEFAULT_PROPS = {
   profile: {},
   cv: [],
   fonts: DEFAULT_FONTS,
-  pageCountOn: true,
+  pageCountOn: false,
   color: "#212121",
   linkColor: "#212121",
   mainTitleSize: 24,
@@ -50,6 +50,8 @@ const DEFAULT_PROPS = {
   unbreakableChildren: false,
   google: false,
 };
+
+const getFullURL = url => (url.startsWith("https://") ? url : `https://${url}`);
 
 export default function resumeCompiler(props) {
   const {
@@ -74,6 +76,32 @@ export default function resumeCompiler(props) {
   const innerPageWidth = PAGE_WIDTH - (pageMargins[0] + pageMargins[2]);
   const largeLineHeight = lineHeight * 1.05;
 
+  const markdownToPdfMake = (markdown, style) =>
+    htmlToPdfmake(markdownConverter.makeHtml(markdown), {
+      window,
+      defaultStyles: {
+        p: {
+          margin: [0, 0, 0, 0],
+        },
+        ul: { margin: [0, 0, 0, 0] },
+        a: { color: linkColor },
+        ...style,
+      },
+    });
+
+  const toLink = (linkText, linkURI, style) =>
+    markdownToPdfMake(`[${linkText}](${linkURI})`, style);
+
+  const toLinkUnstyled = (linkText, linkURI) =>
+    toLink(linkText, linkURI, {
+      a: { color: null, decoration: null },
+    })
+
+  const markdownToPdfMakeUnstyledLink = (markdown) =>
+    markdownToPdfMake(markdown, {
+      a: { color: null, decoration: null },
+    });
+
   const getChild = (child, mini, last) => [
     {
       unbreakable: unbreakableChildren,
@@ -90,7 +118,7 @@ export default function resumeCompiler(props) {
                 body: [
                   [
                     {
-                      text: child.title,
+                      text: markdownToPdfMakeUnstyledLink(child.title),
                       bold: true,
                       font: "childTitleFont",
                       margin: [0, 0, 0, child.meta ? -4 : -2],
@@ -107,7 +135,7 @@ export default function resumeCompiler(props) {
                         [
                           {
                             colSpan: 2,
-                            text: child.subtitles.join(" · "),
+                            text: markdownToPdfMakeUnstyledLink(child.subtitles.join(" · ")),
                           },
                           "",
                         ],
@@ -119,7 +147,7 @@ export default function resumeCompiler(props) {
             ...(mini
               ? [
                   {
-                    text: child.subtitles && child.subtitles.join(", "),
+                    text: child.subtitles && markdownToPdfMake(child.subtitles.join(", ")),
                     lineHeight: largeLineHeight,
                     margin: [0, 0, 0, child.subtitles ? -2 : 1],
                   },
@@ -128,23 +156,7 @@ export default function resumeCompiler(props) {
           ],
         },
         // child body
-        ...(mini || !child.body
-          ? []
-          : [
-              [
-                "",
-                htmlToPdfmake(markdownConverter.makeHtml(child.body), {
-                  window,
-                  defaultStyles: {
-                    p: {
-                      margin: [0, 0, 0, 0],
-                    },
-                    ul: { margin: [0, 0, 0, 0] },
-                    a: { color: linkColor },
-                  },
-                }),
-              ],
-            ]),
+        ...(mini || !child.body ? [] : [["", markdownToPdfMake(child.body)]]),
         { text: "", margin: [0, 0, 0, child.meta || last ? 9 : 4] },
       ],
     },
@@ -157,13 +169,13 @@ export default function resumeCompiler(props) {
         layout: "noBorders",
         table: google
           ? {
-              widths: ["*", innerPageWidth / 2],
+              widths: ["*", innerPageWidth / 1.9],
               body: [
                 [
                   {
                     stack: [
                       [{ text: profile.name, style: "title" }],
-                      [profile.email],
+                      [markdownToPdfMakeUnstyledLink(profile.email)],
                       // profile.programmingLanguages,
                     ],
                     lineHeight: largeLineHeight,
@@ -171,17 +183,8 @@ export default function resumeCompiler(props) {
                   },
                   {
                     stack: [
-                      [
-                        {
-                          text: profile.github,
-                          nodeName: "A",
-                          color: linkColor,
-                          decoration: ["underline"],
-                          style: "html-a",
-                          lineHeight: largeLineHeight,
-                        },
-                      ],
-                      [profile.programmingLanguages],
+                      [profile.github && toLink(profile.github, getFullURL(profile.github))],
+                      [markdownToPdfMake(profile.programmingLanguages)],
                     ],
                     alignment: "right",
                     fontSize: subtitleSize,
@@ -291,6 +294,7 @@ export default function resumeCompiler(props) {
     styles: {
       title: {
         fontSize: mainTitleSize,
+        margin: [0, (subtitleSize - mainTitleSize) * 0.22, 0, 0],
         bold: true,
         font: "headerFont",
       },
