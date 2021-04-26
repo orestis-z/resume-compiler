@@ -27,8 +27,8 @@ resumeCompiler({
   subtitleSize: 11.3,
   headerSize: 13.5,
   fontSize: 9,
-  paragraphFactor: 1.1,
-  pageMargins: [60 * factor, 65 * factor, 60 * factor, 65 * factor],
+  paragraphFactor: 1.45,
+  pageMargins: [60 * factor, 68 * factor, 60 * factor, 68 * factor],
   unbreakableChildren: true,
   google: true,
 });

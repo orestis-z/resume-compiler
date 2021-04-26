@@ -34,14 +34,14 @@ export default [
         "Full-Stack Engineer",
         ["Self-employed", "Global (World Travel)"],
         ["Feb 2019", "May 2020"],
-        "* Created a cloud-based and AI-powered app end-to-end, from product design to development and marketing\n* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces improving the state-of-the-art accuracy by __18%__ and productionised the model for real-time inference\n* Developed a cross-platform frontend using __Cordova__, __React Native__, __React.js__ and __Electron__, and deployed a scalable microservice architecture based on the __Python__ / __Flask__ / __Gunicorn__ / __Nginx__, and __PostgreSQL__ stack\n * Learned using __AWS__ services: EC2, Lambda, CloudWatch, OpsWorks, SNS, SQS, S3, RDS, Route53, CloudFront\n* Generated leads by blogging, facebook & google ads, SEO and email campaigns, and leveraged knowledge in branding, marketing funnels, subscription-based pricing and data-driven optimisations"
+        "* Created a cloud-based and AI-powered app end-to-end, from product design to development and marketing\n* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces improving the state-of-the-art accuracy by __18%__ and productionised the model for real-time inference\n* Developed a cross-platform frontend using __Cordova__, __React Native__, __React.js__ and __Electron__, and deployed a scalable microservice architecture to __AWS__ based on __Python__ / __Flask__, __PostgreSQL__ and proxy services"
       ),
-      cvChild(
-        "Co-Founder, Product Manager",
-        ["Kimata Networks", "Basel, Switzerland"],
-        ["Jan 2018", "Apr 2019"],
-        "* Created specifications and roadmaps for a digital product, hired and managed an agile team of five frontend and backend developers, iterated on user feedback, analysed the competitive landscape\n* Passed the first Venture Kick stage raising CHF 10k, gained insights into company founding, business planning, pivoting, intellectual property, outsourcing, accounting, strategic decision-making and marketing\n* Lead the development of a mobile app with __OpenGL__ / __libGDX__, __Java__ / __Android__ and __React Native__"
-      ),
+      // cvChild(
+      //   "Co-Founder, Product Manager & Tech Lead",
+      //   ["Kimata Networks", "Basel, Switzerland"],
+      //   ["Jan 2018", "Apr 2019"],
+      //   "* Created specifications and roadmaps for a digital product, hired and managed an agile team of five frontend and backend developers, iterated on user feedback, analysed the competitive landscape\n* Passed the first Venture Kick stage raising CHF 10k, gained entrepreneurial insights into company founding, business planning, pivoting, intellectual property, outsourcing, accounting, strategic decision-making and marketing\n* Lead the development of a mobile app with __OpenGL__ / __libGDX__, __Java__ / __Android__ and __React Native__"
+      // ),
 //       cvChild(
 //         "Mobile App Developer (side job)",
 //         ["nextron internet team", "Part-time", "Basel, Switzerland"],
@@ -68,7 +68,7 @@ export default [
       ),
       cvChild(
         "ETH Zurich",
-        ["MSc Robotics, Systems & Control (5.25/6.0)", "Zurich, Switzerland"],
+        ["MSc Robotics,  Systems & Control (5.25/6.0)", "Zurich, Switzerland"],
         ["Feb 2017", "Mar 2019"],
         "Semester thesis (5.75/6.0):\n\n* Introduced a method to boost the scene understanding for robotic systems equipped with RGB-D sensors\n* Showed that an additional depth input channel improves the segmentation accuracy of Mask R-CNN by __31%__\n* Submitted a paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__ and __Python__"
       ),

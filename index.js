@@ -46,6 +46,7 @@ const DEFAULT_PROPS = {
   headerSize: 13,
   fontSize: 10,
   lineHeight: 1,
+  paragraphFactor: 1,
   pageMargins: PAGE_MARGINS,
   unbreakableChildren: false,
   google: false,
@@ -66,6 +67,7 @@ export default function resumeCompiler(props) {
     headerSize,
     fontSize,
     lineHeight,
+    paragraphFactor,
     pageMargins,
     unbreakableChildren,
     filePath,
@@ -112,7 +114,7 @@ export default function resumeCompiler(props) {
           stack: [
             {
               layout: "noBorders",
-              margin: [0, 2, 0, 0],
+              margin: [0, 2 * paragraphFactor, 0, 0],
               table: {
                 widths: [PAGE_WIDTH * 0.6, "*"],
                 body: [
@@ -121,13 +123,13 @@ export default function resumeCompiler(props) {
                       text: markdownToPdfMakeUnstyledLink(child.title),
                       bold: true,
                       font: "childTitleFont",
-                      margin: [0, 0, 0, child.meta ? -4 : -2],
+                      margin: [0, 0, 0, (child.meta ? -4 : -2)],
                     },
                     {
                       text: child.meta ? child.meta.join(" - ") : "",
                       italics: true,
                       alignment: "right",
-                      margin: [0, 0, 0, child.meta ? -4 : -2],
+                      margin: [0, 0, 0, (child.meta ? -4 : -2)],
                     },
                   ],
                   ...(child.meta
@@ -149,7 +151,7 @@ export default function resumeCompiler(props) {
                   {
                     text: child.subtitles && markdownToPdfMake(child.subtitles.join(", ")),
                     lineHeight: largeLineHeight,
-                    margin: [0, 0, 0, child.subtitles ? -2 : 1],
+                    margin: [0, 0, 0, (child.subtitles ? -2 : 1) * paragraphFactor],
                   },
                 ]
               : []),
@@ -157,7 +159,7 @@ export default function resumeCompiler(props) {
         },
         // child body
         ...(mini || !child.body ? [] : [["", markdownToPdfMake(child.body)]]),
-        { text: "", margin: [0, 0, 0, child.meta || last ? 9 : 4] },
+        { text: "", margin: [0, 0, 0, (child.meta || last ? 9 : 4) * paragraphFactor] },
       ],
     },
   ];
@@ -222,7 +224,7 @@ export default function resumeCompiler(props) {
                       },
                     ],
                     alignment: "center",
-                    margin: [0, -7, 0, 0],
+                    margin: [0, -7 * paragraphFactor, 0, 0],
                   },
                   {
                     stack: [[profile.phone], [profile.email]],
@@ -235,7 +237,7 @@ export default function resumeCompiler(props) {
       },
       // summary
       ...(profile.summary
-        ? [{ text: profile.description, margin: [0, 10, 0, 0] }]
+        ? [{ text: profile.description, margin: [0, 10 * paragraphFactor, 0, 0] }]
         : []),
       // sections (experience, education, etc.)
       ...cv.map(cvPart => {
@@ -288,13 +290,13 @@ export default function resumeCompiler(props) {
         return {
           text: `${currentPage} / ${pageCount}`,
           alignment: "right",
-          margin: [0, 30, pageMargins[2], 0],
+          margin: [0, 30 * paragraphFactor, pageMargins[2], 0],
         };
     },
     styles: {
       title: {
         fontSize: mainTitleSize,
-        margin: [0, (subtitleSize - mainTitleSize) * 0.22, 0, 0],
+        margin: [0, (subtitleSize - mainTitleSize) * 0.22 * paragraphFactor, 0, 0],
         bold: true,
         font: "headerFont",
       },
@@ -303,7 +305,7 @@ export default function resumeCompiler(props) {
       },
       header: {
         fontSize: headerSize,
-        margin: [0, 10, 0, 2],
+        margin: [0, 10 * paragraphFactor, 0, 2 * paragraphFactor],
         font: "headerFont",
         bold: true,
       },
