@@ -9,7 +9,7 @@ export const profile = {
   email: "[me@orestisz.com](mailto:me@orestisz.com)",
   // github: "github.com/orestis-z",
   programmingLanguages:
-    "[github.com/orestis-z](https://github.com/orestis-z), [linkedin.com/in/orestis-z](https://linkedin.com/in/orestis-z)\n\nC++, Python, Robotics, Computer Vision, Machine Learning, Cloud Computing",
+    "[github.com/orestis-z](https://github.com/orestis-z), [linkedin.com/in/orestis-z](https://linkedin.com/in/orestis-z)\n\nC++, Python, Robotics, Computer Vision, Machine Learning, Distributed Systems",
   // summary:
   //   "MSc ETH robotics engineer with a solid programming background, strong analytical skills and good communication capabilities. I am result driven, pay attention to details and always up to learn new technologies and tools.",
 };
@@ -28,7 +28,7 @@ export default [
         "Machine Learning Engineer",
         ["benshi.ai (Funded by Bill & Melinda Gates Foundation)", "Barcelona, Spain"],
         ["Nov 2020", "Present"],
-        "* Lead the creation of the data processing tooling with __Databricks__, __Python__, __Spark__ and CI/CD pipelines\n* Switched my role, onboarded and lead a new engineer to hit a milestone that secured __$X million__ in funding\n* Managed the lifecycle of ML models, built data pipelines, A/B testing modules and a mock data generator\n* Leveraged knowledge in __Pandas__, __MLflow__, __Azure__, __Docker__, __Kubernetes__, __Vue.js__, ETL and statistical modeling"
+        "* Lead the creation of the data processing tooling with __Databricks__, __Python__, __Spark__ and CI/CD pipelines\n* Switched my role, onboarded and lead a new engineer to hit a milestone that secured __$X million__ in funding\n* Managed the lifecycle of ML models, built data pipelines, A/B testing modules and a mock data generator, and set up a reinforcement learning simulation environment\n* Leveraged knowledge in __Pandas__, __MLflow__, __Azure__, __Docker__, __Kubernetes__, __Vue.js__, ETL and statistical modeling"
       ),
       cvChild(
         "Full-Stack Engineer",
