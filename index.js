@@ -3,6 +3,7 @@ import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import PdfPrinter from "pdfmake/src/printer.js";
 import htmlToPdfmake from "html-to-pdfmake";
+import removeMd from "remove-markdown";
 import showdown from "showdown";
 import jsdom from "jsdom";
 import { cvChild } from "./utils.js";
@@ -97,9 +98,9 @@ export default function resumeCompiler(props) {
   const toLinkUnstyled = (linkText, linkURI) =>
     toLink(linkText, linkURI, {
       a: { color: null, decoration: null },
-    })
+    });
 
-  const markdownToPdfMakeUnstyledLink = (markdown) =>
+  const markdownToPdfMakeUnstyledLink = markdown =>
     markdownToPdfMake(markdown, {
       a: { color: null, decoration: null },
     });
@@ -123,13 +124,13 @@ export default function resumeCompiler(props) {
                       text: markdownToPdfMakeUnstyledLink(child.title),
                       bold: true,
                       font: "childTitleFont",
-                      margin: [0, 0, 0, (child.meta ? -4 : -2)],
+                      margin: [0, 0, 0, child.meta ? -4 : -2],
                     },
                     {
                       text: child.meta ? child.meta.join(" - ") : "",
                       italics: true,
                       alignment: "right",
-                      margin: [0, 0, 0, (child.meta ? -4 : -2)],
+                      margin: [0, 0, 0, child.meta ? -4 : -2],
                     },
                   ],
                   ...(child.meta
@@ -137,7 +138,9 @@ export default function resumeCompiler(props) {
                         [
                           {
                             colSpan: 2,
-                            text: markdownToPdfMakeUnstyledLink(child.subtitles.join(" · ")),
+                            text: markdownToPdfMakeUnstyledLink(
+                              child.subtitles.join(" · ")
+                            ),
                           },
                           "",
                         ],
@@ -149,9 +152,16 @@ export default function resumeCompiler(props) {
             ...(mini
               ? [
                   {
-                    text: child.subtitles && markdownToPdfMake(child.subtitles.join(", ")),
+                    text:
+                      child.subtitles &&
+                      markdownToPdfMake(child.subtitles.join(", ")),
                     lineHeight: largeLineHeight,
-                    margin: [0, 0, 0, (child.subtitles ? -2 : 1) * paragraphFactor],
+                    margin: [
+                      0,
+                      0,
+                      0,
+                      (child.subtitles ? -2 : 1) * paragraphFactor,
+                    ],
                   },
                 ]
               : []),
@@ -159,7 +169,10 @@ export default function resumeCompiler(props) {
         },
         // child body
         ...(mini || !child.body ? [] : [["", markdownToPdfMake(child.body)]]),
-        { text: "", margin: [0, 0, 0, (child.meta || last ? 9 : 4) * paragraphFactor] },
+        {
+          text: "",
+          margin: [0, 0, 0, (child.meta || last ? 9 : 4) * paragraphFactor],
+        },
       ],
     },
   ];
@@ -185,7 +198,10 @@ export default function resumeCompiler(props) {
                   },
                   {
                     stack: [
-                      [profile.github && toLink(profile.github, getFullURL(profile.github))],
+                      [
+                        profile.github &&
+                          toLink(profile.github, getFullURL(profile.github)),
+                      ],
                       [markdownToPdfMake(profile.programmingLanguages)],
                     ],
                     alignment: "right",
@@ -237,7 +253,12 @@ export default function resumeCompiler(props) {
       },
       // summary
       ...(profile.summary
-        ? [{ text: profile.description, margin: [0, 10 * paragraphFactor, 0, 0] }]
+        ? [
+            {
+              text: profile.description,
+              margin: [0, 10 * paragraphFactor, 0, 0],
+            },
+          ]
         : []),
       // sections (experience, education, etc.)
       ...cv.map(cvPart => {
@@ -296,7 +317,12 @@ export default function resumeCompiler(props) {
     styles: {
       title: {
         fontSize: mainTitleSize,
-        margin: [0, (subtitleSize - mainTitleSize) * 0.22 * paragraphFactor, 0, 0],
+        margin: [
+          0,
+          (subtitleSize - mainTitleSize) * 0.22 * paragraphFactor,
+          0,
+          0,
+        ],
         bold: true,
         font: "headerFont",
       },
@@ -334,4 +360,21 @@ export default function resumeCompiler(props) {
   console.log(`Saved to ${path}`);
 }
 
-export { cvChild };
+function resumeCompilerPlain(cv) {
+  const str = cv
+    .map(cvPart => {
+      const children = cvPart.children
+        .map(
+          child =>
+            `${child.title}\n${child.subtitles
+              .concat(child.meta)
+              .join(" · ")}\n${child.body}`
+        )
+        .join("\n\n");
+      return `${cvPart.title}\n\n${children}`;
+    })
+    .join("\n\n");
+  return removeMd(str, { stripListLeaders: false }).replaceAll("\n* ", "\n• ");
+}
+
+export { cvChild, resumeCompilerPlain };
