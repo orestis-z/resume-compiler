@@ -25,9 +25,15 @@ export default [
       //   "* Added new features to a frontend website with __Vue.js__ following integration testing with __TestCafe__"
       // ),
       cvChild(
+        "Perception Engineer",
+        ["Seervision (ETH Zurich Spin-off)", "Zurich, Switzerland"],
+        ["Aug 2021", "Present"],
+        "* Sped up the person detection and pose estimation pipeline by __3x__, increased its accuracy by __10%__, and decreased its GPU memory usage by __45%__\n* Lead the effort to __double__ the supported systems per hardware unit by system alternations and optimizations \n* Implemented a face recognition system from scratch achieving a false-positive rate below __5%__"
+      ),
+      cvChild(
         "Machine Learning Engineer",
         ["benshi.ai (Funded by Bill & Melinda Gates Foundation)", "Barcelona, Spain"],
-        ["Nov 2020", "Present"],
+        ["Nov 2020", "June 2021"],
         "* Lead the creation of the data processing tooling with __Databricks__, __Python__, __Spark__ and CI/CD pipelines\n* Switched my role, onboarded and lead a new engineer to hit a milestone that secured __$X million__ in funding\n* Managed the lifecycle of ML models, built data pipelines, A/B testing modules, a mock data generator and reinforcement learning simulation environment, wrote tests, and set coding standards\n* Leveraged knowledge in __Pandas__, __MLflow__, __Azure__, __Docker__, __Kubernetes__, __Vue.js__, ETL and statistical modeling"
       ),
       cvChild(
