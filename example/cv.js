@@ -37,7 +37,7 @@ export default [
         "* Created a cloud-based and AI-powered app end-to-end, from product design to development and marketing\n* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces improving the state-of-the-art accuracy by __18%__ and productionised the model for real-time inference\n* Developed a cross-platform frontend using __Cordova__, __React Native__, __React.js__ and __Electron__, and deployed a scalable microservice architecture based on the __Python__ / __Flask__ / __Gunicorn__ / __NginX__, and __PostgreSQL__ stack\n * Learned using __AWS__ services: EC2, Lambda, CloudWatch, OpsWorks, SNS, SQS, S3, RDS, Route53, CloudFront\n* Generated leads by blogging, facebook & google ads, SEO and email campaigns, and leveraged knowledge in branding, marketing funnels, subscription-based pricing and data-driven optimisations"
       ),
       cvChild(
-        "Co-Founder, Product Manager",
+        "Co-Founder, Product Manager & Tech Lead",
         ["Kimata Networks", "Basel, Switzerland"],
         ["Jan 2018", "Apr 2019"],
         "* Created specifications and roadmaps for a digital product, hired and managed an agile team of five frontend and backend developers, iterated on user feedback, analysed the competitive landscape\n* Passed the first Venture Kick stage raising CHF 10k, gained insights into company founding, business planning, pivoting, intellectual property, outsourcing, accounting, strategic decision-making and marketing\n* Lead the development of a mobile app with __OpenGL__ / __libGDX__, __Java__ / __Android__ and __React Native__"
