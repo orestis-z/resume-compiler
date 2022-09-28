@@ -19,10 +19,10 @@ export default [
     title: "Experience",
     children: [
         cvChild(
-            "Perception Engineer",
+            "Tech Lead, Machine Learning",
             ["Seervision (ETH Zurich Spin-off)", "Zurich, Switzerland"],
             ["Aug 2021", "Present"],
-            "* Sped up the person detection and pose estimation pipeline by __3x__, increased its accuracy by __10%__, and decreased its GPU memory usage by __45%__\n* Lead the effort to __double__ the supported systems per hardware unit by system alternations and optimizations \n* Implemented a face recognition system from scratch achieving a false-positive rate below __5%__"
+            "* Sped up the person detection and pose estimation pipeline by __3x__, increased its accuracy by __10%__, and decreased its GPU memory usage by __45%__\n* Implemented a face recognition system from scratch achieving a false-positive rate below __5%__\n* Lead a technical effort that __tripled__ the supported systems per hardware unit"
           ),
       cvChild(
         "Machine Learning Engineer",
