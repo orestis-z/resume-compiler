@@ -7,7 +7,7 @@ const fonts = {
     // italics: "example/fonts/SalvoSans-Light-Italic.ttf",
     // bold: "example/fonts/SalvoSans-Medium2.ttf",
     normal: "example/fonts/Montserrat-Light.ttf",
-    italics: "example/fonts/Montserrat-Italic.ttf",
+    italics: "example/fonts/Montserrat-LightItalic.ttf",
     bold: "example/fonts/Montserrat-SemiBold.ttf",
   },
   childTitleFont: {
