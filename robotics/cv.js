@@ -9,7 +9,7 @@ export const profile = {
   email: "[me@orestisz.com](mailto:me@orestisz.com)",
   // github: "github.com/orestis-z",
   programmingLanguages:
-    "[github.com/orestis-z](https://github.com/orestis-z), [linkedin.com/in/orestis-z](https://linkedin.com/in/orestis-z)\n\nMachine Learning, Systems & Control, Robotics, Software, Distributed Systems",
+    "[github.com/orestis-z](https://github.com/orestis-z), [linkedin.com/in/orestis-z](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision, Robotics, Systems & Control, Distributed Systems",
   // summary:
   //   "MSc ETH robotics engineer with a solid programming background, strong analytical skills and good communication capabilities. I am result driven, pay attention to details and always up to learn new technologies and tools.",
 };
@@ -25,22 +25,22 @@ export default [
       //   "* Added new features to a frontend website with __Vue.js__ following integration testing with __TestCafe__"
       // ),
       cvChild(
-        "Tech Lead, Machine Learning",
+        "Senior Machine Learning Engineer",
         ["Seervision (ETH Zurich Spin-off)", "Zurich, Switzerland"],
         ["Aug 2021", "Present"],
-        "* Sped up the person detection and pose estimation pipeline by __3x__, increased its accuracy by __10%__, and decreased its GPU memory usage by __45%__\n* Implemented a face recognition system from scratch achieving a false-positive rate below __5%__\n* Lead technical efforts that __tripled__ the supported systems per hardware unit"
-      ),
+        "* Optimized person detection and pose estimation pipeline by __3x__, improved accuracy by __10%__, and reduced GPU memory usage by __45%__\n* Built a face recognition system from scratch with a false-positive rate below __5%__\n* __Tripled__ the number of supported systems per hardware unit as technical lead\n* Received recognition for achieving the highest business impact among all engineers in 2022"
+        ),
       cvChild(
         "Machine Learning Engineer",
         ["benshi.ai (Funded by Bill & Melinda Gates Foundation)", "Barcelona, Spain"],
         ["Nov 2020", "June 2021"],
-        "* Lead the creation of the data processing tooling with __Databricks__, __Python__, __Spark__ and CI/CD pipelines\n* Switched my role, onboarded and lead a new engineer to hit a milestone that secured __$X million__ in funding\n* Managed the lifecycle of ML models, built data pipelines, A/B testing modules, a mock data generator and reinforcement learning simulation environment, wrote tests, and set coding standards\n* Leveraged knowledge in __Pandas__, __MLflow__, __Azure__, __Docker__, __Kubernetes__, __Vue.js__, ETL and statistical modeling"
+        "* Led creation of data processing tooling with __Databricks__, __Python__, __Spark__, and CI/CD pipelines, securing __$X million__ in funding with mentored engineer\n* Managed ML models' lifecycle, building data pipelines, A/B testing, mock data generation, and RL simulation using __Pandas__, __MLflow__, __Azure__, __Docker__, __Kubernetes__, __Vue.js__, ETL, and statistical modeling"
       ),
       cvChild(
         "Full-Stack Engineer",
-        ["Self-employed", "Global (World Travel)"],
+        ["Self-employed", "Global (Digital Nomad)"],
         ["Feb 2019", "May 2020"],
-        "* Created a cloud-based and AI-powered app end-to-end, from product design to development and marketing\n* Modified and retrained a CNN with __TensorFlow__ and __scikit-learn__ on a dataset of faces improving the state-of-the-art accuracy by __18%__ and productionised the model for real-time inference\n* Developed a cross-platform frontend using __Cordova__, __React Native__, __React.js__ and __Electron__, and deployed a scalable microservice architecture to __AWS__ based on __Python__ / __Flask__, __PostgreSQL__ and proxy services"
+        "* Developed and marketed an end-to-end cloud-based AI-powered app, using __TensorFlow__ and __scikit-learn__ to modify and retrain a CNN on a face dataset resulting in an __18%__ improvement in accuracy, and productionized the model for real-time inference\n* Designed cross-platform frontend using __Cordova__, __React Native__, __React.js__, and __Electron__, and deployed scalable microservices to __AWS__ with __Python__/__Flask__, __PostgreSQL__, and proxies"
       ),
       // cvChild(
       //   "Co-Founder, Product Manager & Tech Lead",
@@ -58,7 +58,7 @@ export default [
         "Control Systems Engineer, Intern",
         ["Rapyuta Robotics (ETH Zurich Spin-off)", "Tokyo, Japan"],
         ["Mar 2016", "Feb 2017"],
-        "* Achieved a __55x__ speedup of __NumPy__-heavy simulation iterations, and open-sourced the __Python__ package <a href='https://github.com/wolfv/pyjet' target='_blank'>PyJet</a>\n* Designed energy estimators for a multicopter using a Kalman Filter (EKF), __Python__,  __SciPy__ and __C++__ \n* Improved a setpoint tracking controller and conducted sensor tests for a multicopter using __C++__ and __Python__\n* Gained experience in program optimisation, __ROS__, __Linux__, __Bash__ scripting, __Git__, Scrum and authentication servers"
+        "* Achieved a __55x__ speedup of __NumPy__-heavy simulation iterations and open-sourced the __Python__ package <a href='https://github.com/wolfv/pyjet' target='_blank'>PyJet</a>\n* Designed energy estimators for a multicopter using a Kalman Filter (EKF), __Python__, __SciPy__, and __C++__\n* Improved a setpoint tracking controller and conducted sensor tests for a multicopter using __C++__ and __Python__"
       ),
     ],
   },
@@ -70,19 +70,19 @@ export default [
         "Imperial College London",
         ["Master's Thesis", "London, United Kingdom"],
         ["Aug 2018", "Mar 2019"],
-        "* Laid a solid step stone for generating arbitrarily large 3D human pose datasets for human motion prediction\n* Pioneered a multi-task CNN deep learning architecture that predicts object instances, human poses, instance masks and tracks people end-to-end\n* Implemented the CNN using __Caffe2__ and __Python__ including custom operators with __CUDA C/C++__"
+        "* Pioneered a multi-task CNN deep learning architecture that predicts object instances, human poses, instance masks, and tracks people end-to-end.\n* Implemented CNN using __Caffe2__ and __Python__ including custom operators with __CUDA C/C++__"
       ),
       cvChild(
         "ETH Zurich",
-        ["MSc Robotics, Systems & Control (5.25/6.0)", "Zurich, Switzerland"],
+        ["MSc Robotics, Systems & Control", "Zurich, Switzerland"],
         ["Feb 2017", "Mar 2019"],
-        "Semester thesis (5.75/6.0):\n\n* Introduced a method to boost the scene understanding for robotic systems equipped with RGB-D sensors\n* Showed that an additional depth input channel improves the segmentation accuracy of Mask R-CNN by __31%__\n* Submitted a paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__ and __Python__"
+        "* Introduced a method to boost scene understanding for robotic systems equipped with RGB-D sensors\n* Showed that an additional depth input channel improves the segmentation accuracy of Mask R-CNN by __31%__\n* Submitted paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__ and __Python__"
       ),
       cvChild(
         "ETH Zurich",
-        ["BSc Mechanical Engineering (5.51/6.0)", "Zurich, Switzerland"],
+        ["BSc Mechanical Engineering", "Zurich, Switzerland"],
         ["Sep 2012", "Feb 2016"],
-        "* Graduated with more than two standard deviations above the average (top __5%__)\n\nBachelor’s thesis (5.75/6.0):\n* Implemented balancing manoeuvres for the [Omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) to demonstrate its 6DoF flying versatility\n* Derived the system dynamics, synthesised non-linear attitude control algorithms and a Kalman filter using quaternions, __C++__ and __MATLAB__ / __Simulink__"
+        "* Graduated with more than two standard deviations above the average (top __5%__)\n* Implemented balancing manoeuvres for the [Omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) to demonstrate its 6DoF flying versatility\n* Derived system dynamics, synthesised non-linear attitude control algorithms, and a Kalman filter using quaternions, __C++__ and __MATLAB__ / __Simulink__"
       ),
     ],
   },

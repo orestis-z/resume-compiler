@@ -3,9 +3,12 @@ import cv, { profile } from "./cv.js";
 
 const fonts = {
   defaultFont: {
-    normal: "example/fonts/SalvoSans-Light2.ttf",
-    italics: "example/fonts/SalvoSans-Light-Italic.ttf",
-    bold: "example/fonts/SalvoSans-Medium2.ttf",
+    // normal: "example/fonts/SalvoSans-Light2.ttf",
+    // italics: "example/fonts/SalvoSans-Light-Italic.ttf",
+    // bold: "example/fonts/SalvoSans-Medium2.ttf",
+    normal: "example/fonts/Montserrat-Light.ttf",
+    italics: "example/fonts/Montserrat-Italic.ttf",
+    bold: "example/fonts/Montserrat-SemiBold.ttf",
   },
   childTitleFont: {
     bold: "example/fonts/SalvoSans-Bold.ttf",
@@ -22,11 +25,11 @@ resumeCompiler({
   cv,
   profile,
   fonts,
-  lineHeight: 0.94,
+  lineHeight: 1.05,
   mainTitleSize: 24,
-  subtitleSize: 11.3,
+  subtitleSize: 11,
   headerSize: 13.5,
-  fontSize: 9,
+  fontSize: 8.7,
   paragraphFactor: 1.32,
   pageMargins: [60 * factor, 68 * factor, 60 * factor, 68 * factor],
   unbreakableChildren: true,

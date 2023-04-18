@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-node ./example/compileResume.js
+node ./robotics/compileResume.js
 sleep 1
 node ./scripts/pdf2png.js
 sleep 1
