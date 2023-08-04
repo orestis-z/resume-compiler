@@ -31,7 +31,7 @@ export default [
         "* Optimized person detection and pose estimation pipeline by __3x__, improved accuracy by __10%__, and reduced GPU memory usage by __45%__\n* Built a face recognition system from scratch with a false-positive rate below __5%__\n* __Tripled__ the number of supported systems per hardware unit as technical lead\n* Received recognition for achieving the highest business impact among all engineers in 2022"
         ),
       cvChild(
-        "Machine Learning Engineer",
+        "MLOps Engineer",
         ["benshi.ai (Funded by Bill & Melinda Gates Foundation)", "Barcelona, Spain"],
         ["Nov 2020", "June 2021"],
         "* Led creation of data processing tooling with __Databricks__, __Python__, __Spark__, and CI/CD pipelines, securing __$X million__ in funding with mentored engineer\n* Managed ML models' lifecycle, building data pipelines, A/B testing, mock data generation, and RL simulation using __Pandas__, __MLflow__, __Azure__, __Docker__, __Kubernetes__, __Vue.js__, ETL, and statistical modeling"
