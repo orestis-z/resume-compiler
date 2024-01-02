@@ -53,7 +53,8 @@ const DEFAULT_PROPS = {
   google: false,
 };
 
-const getFullURL = url => (url.startsWith("https://") ? url : `https://${url}`);
+const getFullURL = (url) =>
+  url.startsWith("https://") ? url : `https://${url}`;
 
 export default function resumeCompiler(props) {
   const {
@@ -100,7 +101,7 @@ export default function resumeCompiler(props) {
       a: { color: null, decoration: null },
     });
 
-  const markdownToPdfMakeUnstyledLink = markdown =>
+  const markdownToPdfMakeUnstyledLink = (markdown) =>
     markdownToPdfMake(markdown, {
       a: { color: null, decoration: null },
     });
@@ -261,7 +262,7 @@ export default function resumeCompiler(props) {
           ]
         : []),
       // sections (experience, education, etc.)
-      ...cv.map(cvPart => {
+      ...cv.map((cvPart) => {
         return [
           // ensure that no pagebreak between header and first child
           {
@@ -362,10 +363,10 @@ export default function resumeCompiler(props) {
 
 function resumeCompilerPlain(cv) {
   const str = cv
-    .map(cvPart => {
+    .map((cvPart) => {
       const children = cvPart.children
         .map(
-          child =>
+          (child) =>
             `${child.title}\n${child.subtitles
               .concat(child.meta)
               .join(" · ")}\n${child.body}`
