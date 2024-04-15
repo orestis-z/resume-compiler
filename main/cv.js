@@ -17,19 +17,19 @@ export default [
     children: [
       cvChild(
         "Senior Machine Learning Engineer",
-        ["Q-SYS", "Zurich, Switzerland", "Remote"],
+        ["QSC", "Zurich, Switzerland", "Remote"],
         ["Jul 2023", "Present"],
         "* Ported all vision ML models to ONNX and __TensorRT__, __tripling__ pipeline speed and reducing VRAM by __15%__\n* Redesigned ML architecture for modularity and flexibility, led technical debt cleanup, and managed the ML team, integrating groups and enforcing best practices"
       ),
       cvChild(
         "Machine Learning Engineer",
         [
-          "Seervision (ETH Zurich Spin-off, acquired by Q-SYS)",
+          "Seervision (ETH Zurich Spin-off, acquired by QSC)",
           "Zurich, Switzerland",
           "Remote",
         ],
         ["Aug 2021", "Jul 2023"],
-        "* Optimized person detection and pose estimation pipeline, increasing speed by __20%__, accuracy by __10%__, and reducing VRAM by __45%__\n* Created a face recognition system with under __5%__ false-positive rate, greatly enhancing product value\n* Drove efforts to __triple__ supported systems per hardware unit, enhancing scalability\n* Prototyped a multi-view grid for hybrid meeting rooms, a decisive factor in the acquisition by Q-SYS\n* Received recognition for achieving the highest business impact among all engineers in 2022\n* Enhanced expertise in __ROS__, __C++__, __Python__, __PyTorch__, __OpenCV__, __CUDA__, __Docker__, CI/CD and system monitoring"
+        "* Optimized person detection and pose estimation pipeline, increasing speed by __20%__, accuracy by __10%__, and reducing VRAM by __45%__\n* Created a face recognition system with under __5%__ false-positive rate, greatly enhancing product value\n* Drove efforts to __triple__ supported systems per hardware unit, enhancing scalability\n* Prototyped a multi-view grid for hybrid meeting rooms, a decisive factor in the acquisition by QSC\n* Received recognition for achieving the highest business impact among all engineers in 2022\n* Enhanced expertise in __ROS__, __C++__, __Python__, __PyTorch__, __OpenCV__, __CUDA__, __Docker__, CI/CD and system monitoring"
       ),
       cvChild(
         "MLOps Engineer",
