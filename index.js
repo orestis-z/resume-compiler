@@ -140,7 +140,7 @@ export default function resumeCompiler(props) {
                           {
                             colSpan: 2,
                             text: markdownToPdfMakeUnstyledLink(
-                              child.subtitles.join(" · ")
+                              child.subtitles.join(" ∙ ")
                             ),
                           },
                           "",
