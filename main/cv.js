@@ -84,7 +84,7 @@ export default [
         ["Master's Thesis", "London, United Kingdom"],
         ["Aug 2018", "Mar 2019"],
         "* " + [
-          "Pioneered a real-time multi-task CNN deep learning architecture for object instance prediction, human pose estimation, instance masking, as well as multi-person tracking",
+          "Pioneered an online multi-task CNN deep learning architecture for object instance prediction, human pose estimation, instance masking, as well as multi-person tracking",
           "Trained the visual cue-matching head of a Siamese network using Mask R-CNN outputs on the MOT dataset",
           "Implemented a CNN using __Caffe2__ and __Python__ including custom operators with __CUDA C/C++__",
         ].join("\n* ")
