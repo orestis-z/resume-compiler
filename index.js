@@ -375,7 +375,7 @@ function resumeCompilerPlain(cv) {
       return `${cvPart.title}\n\n${children}`;
     })
     .join("\n\n");
-  return removeMd(str, { stripListLeaders: false }).replaceAll("\n* ", "\n• ");
+  return removeMd(str, { stripListLeaders: false }).replaceAll("\n* ", "\n- ");
 }
 
 export { cvChild, resumeCompilerPlain };
