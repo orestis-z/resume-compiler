@@ -63,7 +63,7 @@ export default [
         ["Freelancer", "Remote"],
         ["Feb 2019", "May 2020"],
         "* " + [
-          "Designed, prototyped, trained, and deployed a CNN-based face predictor using __TensorFlow__ and __scikit-learn__, achieving an __18%__ improvement in accuracy and optimizing it for real-time inference",
+          "Designed, prototyped, trained, and deployed a CNN-based face predictor using __TensorFlow__ and __scikit-learn__, achieving an __18%__ improvement in accuracy and optimizing it for low-latency inference",
           "Designed a cross-platform architecture using __Cordova__, __React Native__, __React.js__, and __Electron__ for the frontend; deployed scalable microservices to __AWS__ with __Python__/__Flask__, __PostgreSQL__, and proxies"
         ].join("\n* ")
       ),
