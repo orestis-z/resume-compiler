@@ -124,7 +124,7 @@ export default function resumeCompiler(props) {
           stack: [
             {
               layout,
-              margin: [0, 3 * paragraphFactor, 0, 1 * paragraphFactor, 0],
+              margin: [0, 4 * paragraphFactor, 0, 1 * paragraphFactor, 0],
               table: {
                 // widths: [0.17 * PAGE_WIDTH, "*", 0.1 * PAGE_WIDTH],
                 body: [

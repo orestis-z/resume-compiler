@@ -32,7 +32,7 @@ resumeCompiler({
   headerSize: 13.5,
   fontSize: 8.7,
 //   paragraphFactor: 1.32,
-  paragraphFactor: 1,
+  paragraphFactor: 0.8,
   pageMargins: [60 * factor, 68 * factor, 60 * factor, 68 * factor],
   unbreakableChildren: true,
   google: true,
