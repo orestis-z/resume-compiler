@@ -23,7 +23,7 @@ export default [
         body: "* " + [
           "Ported all vision ML models to ONNX and __TensorRT__, __tripling__ pipeline speed and reducing VRAM usage by __15%__",
           "Implemented batched inference, increasing system speed by __30%__ on resource-constrained hardware",
-          "Lead efforts to prototype CV/ML systems using the latest state-of-the-art advances",
+          "Led efforts to prototype CV/ML systems using the latest state-of-the-art advances",
           "Redesigned ML architecture for modularity and flexibility, and led efforts to clean up technical debt",
           "Co-managed and mentored the ML team, integrating teams and enforcing best practices",
           "Built monitoring tools for vision pipeline performance, enhancing observability and alerting capabilities",
