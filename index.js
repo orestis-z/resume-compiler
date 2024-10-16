@@ -17,6 +17,10 @@ const { window } = new jsdom.JSDOM("");
 const PAGE_WIDTH = 595.28;
 const PAGE_MARGINS = [60, 65, 60, 65];
 
+const DEBUG = false;
+
+const layout = DEBUG ? "line" : "noBorders";
+
 function getAbsPath(filePath) {
   return path.join(__dirname, "default-fonts", filePath);
 }
@@ -74,14 +78,17 @@ export default function resumeCompiler(props) {
     unbreakableChildren,
     filePath,
     google,
+    separator
   } = { ...DEFAULT_PROPS, ...props };
   if (pageCountOn) pageMargins[3] += 20;
 
   const innerPageWidth = PAGE_WIDTH - (pageMargins[0] + pageMargins[2]);
   const largeLineHeight = lineHeight * 1.05;
 
-  const markdownToPdfMake = (markdown, style) =>
-    htmlToPdfmake(markdownConverter.makeHtml(markdown), {
+  const markdownToPdfMake = (markdown, style) => {
+    const html = markdownConverter.makeHtml(markdown);
+    // console.log(html)
+    return htmlToPdfmake(html, {
       window,
       defaultStyles: {
         p: {
@@ -92,7 +99,7 @@ export default function resumeCompiler(props) {
         ...style,
       },
     });
-
+  }
   const toLink = (linkText, linkURI, style) =>
     markdownToPdfMake(`[${linkText}](${linkURI})`, style);
 
@@ -101,12 +108,13 @@ export default function resumeCompiler(props) {
       a: { color: null, decoration: null },
     });
 
-  const markdownToPdfMakeUnstyledLink = (markdown) =>
+  const markdownToPdfMakeUnstyledLink = (markdown, style) =>
     markdownToPdfMake(markdown, {
       a: { color: null, decoration: null },
+      ...style
     });
 
-  const getChild = (child, mini, last) => [
+  const getChild = (child, mini, last, separator) => [
     {
       unbreakable: unbreakableChildren,
       stack: [
@@ -115,16 +123,23 @@ export default function resumeCompiler(props) {
           unbreakable: true,
           stack: [
             {
-              layout: "noBorders",
-              margin: [0, 2 * paragraphFactor, 0, 0],
+              layout,
+              margin: [0, 3 * paragraphFactor, 0, 1 * paragraphFactor, 0],
               table: {
-                widths: [PAGE_WIDTH * 0.6, "*"],
+                // widths: [0.17 * PAGE_WIDTH, "*", 0.1 * PAGE_WIDTH],
                 body: [
                   [
+                    // {
+                    //   text: child.date,
+                    // },
                     {
-                      text: markdownToPdfMakeUnstyledLink(child.title),
-                      bold: true,
-                      font: "childTitleFont",
+                      text: markdownToPdfMakeUnstyledLink(
+                        child.date + `${separator}<b>${child.title}</b>` + (child.subtitles ? separator + child.subtitles.join(separator) : ""),
+                        {p: {decoration: "underline"}}
+                      ),
+                      // bold: true,
+                      // font: "childTitleFont",
+                      alignment: "left",
                       margin: [0, 0, 0, child.meta ? -4 : -2],
                     },
                     {
@@ -134,42 +149,45 @@ export default function resumeCompiler(props) {
                       margin: [0, 0, 0, child.meta ? -4 : -2],
                     },
                   ],
-                  ...(child.meta
-                    ? [
-                        [
-                          {
-                            colSpan: 2,
-                            text: markdownToPdfMakeUnstyledLink(
-                              child.subtitles.join(" ∙ ")
-                            ),
-                          },
-                          "",
-                        ],
-                      ]
-                    : []),
+                  // ...(child.subtitles
+                  //   ? [
+                  //       [
+                  //         {
+                  //           colSpan: 2,
+                  //           text: markdownToPdfMakeUnstyledLink(
+                  //             child.subtitles.join(" ∙ ")
+                  //           ),
+                  //         },
+                  //         // "",
+                  //         "",
+                  //       ],
+                  //     ]
+                  //   : []),
                 ],
               },
             },
             ...(mini
               ? [
-                  {
-                    text:
-                      child.subtitles &&
-                      markdownToPdfMake(child.subtitles.join(", ")),
-                    lineHeight: largeLineHeight,
-                    margin: [
-                      0,
-                      0,
-                      0,
-                      (child.subtitles ? -2 : 1) * paragraphFactor,
-                    ],
-                  },
-                ]
+                {
+                  text:
+                    child.subtitles &&
+                    markdownToPdfMake(child.subtitles.join(", ")),
+                  lineHeight: largeLineHeight,
+                  margin: [
+                    0,
+                    0,
+                    0,
+                    (child.subtitles ? -2 : 1) * paragraphFactor,
+                  ],
+                },
+              ]
               : []),
           ],
         },
         // child body
-        ...(mini || !child.body ? [] : [["", markdownToPdfMake(child.body)]]),
+        ...(mini || !child.body ? [] : [["", markdownToPdfMake(child.body, {
+          ul: { margin: [8, 0, 0, 0] },
+        })]]),
         {
           text: "",
           margin: [0, 0, 0, (child.meta || last ? 9 : 4) * paragraphFactor],
@@ -182,84 +200,84 @@ export default function resumeCompiler(props) {
     content: [
       // title including personal information
       {
-        layout: "noBorders",
+        layout,
         table: google
           ? {
-              widths: ["*", innerPageWidth / 1.9],
-              body: [
-                [
-                  {
-                    stack: [
-                      [{ text: profile.name, style: "title" }],
-                      [markdownToPdfMakeUnstyledLink(profile.email)],
-                      // profile.programmingLanguages,
+            widths: ["*", innerPageWidth / 1.9],
+            body: [
+              [
+                {
+                  stack: [
+                    [{ text: profile.name, style: "title" }],
+                    [markdownToPdfMakeUnstyledLink(profile.email + (profile.permit ? separator + profile.permit : ""))],
+
+                  ],
+                  lineHeight: largeLineHeight,
+                  fontSize: subtitleSize,
+                },
+                {
+                  stack: [
+                    [
+                      profile.github &&
+                      toLink(profile.github, getFullURL(profile.github)),
                     ],
-                    lineHeight: largeLineHeight,
-                    fontSize: subtitleSize,
-                  },
-                  {
-                    stack: [
-                      [
-                        profile.github &&
-                          toLink(profile.github, getFullURL(profile.github)),
-                      ],
-                      [markdownToPdfMake(profile.programmingLanguages)],
-                    ],
-                    alignment: "right",
-                    fontSize: subtitleSize,
-                  },
-                ],
+                    [markdownToPdfMake(profile.programmingLanguages)],
+                  ],
+                  alignment: "right",
+                  fontSize: subtitleSize,
+                },
               ],
-            }
+            ],
+          }
           : {
-              widths: ["*", innerPageWidth / 2, "*"],
-              body: [
-                [
-                  {
-                    stack: [
-                      profile.address,
-                      {
-                        text: profile.github,
-                        nodeName: "A",
-                        color: linkColor,
-                        decoration: ["underline"],
-                        style: "html-a",
-                      },
-                      // profile.programmingLanguages,
-                    ],
-                    lineHeight: largeLineHeight,
-                  },
-                  {
-                    stack: [
-                      {
-                        text: profile.name,
-                        style: "title",
-                      },
-                      {
-                        text: profile.title,
-                        style: "subtitle",
-                      },
-                    ],
-                    alignment: "center",
-                    margin: [0, -7 * paragraphFactor, 0, 0],
-                  },
-                  {
-                    stack: [[profile.phone], [profile.email]],
-                    alignment: "right",
-                    lineHeight: largeLineHeight,
-                  },
-                ],
+            widths: ["*", innerPageWidth / 2, "*"],
+            body: [
+              [
+                {
+                  stack: [
+                    profile.address,
+                    {
+                      text: profile.github,
+                      nodeName: "A",
+                      color: linkColor,
+                      decoration: ["underline"],
+                      style: "html-a",
+                    },
+                    // profile.programmingLanguages,
+                  ],
+                  lineHeight: largeLineHeight,
+                },
+                {
+                  stack: [
+                    {
+                      text: profile.name,
+                      style: "title",
+                    },
+                    {
+                      text: profile.title,
+                      style: "subtitle",
+                    },
+                  ],
+                  alignment: "center",
+                  margin: [0, -7 * paragraphFactor, 0, 0],
+                },
+                {
+                  stack: [[profile.phone], [profile.email]],
+                  alignment: "right",
+                  lineHeight: largeLineHeight,
+                },
               ],
-            },
+            ],
+          },
       },
       // summary
       ...(profile.summary
         ? [
-            {
-              text: profile.description,
-              margin: [0, 10 * paragraphFactor, 0, 0],
-            },
-          ]
+          {
+            text: profile.description,
+            margin: [0, 10 * paragraphFactor, 0, 0],
+          },
+        ]
         : []),
       // sections (experience, education, etc.)
       ...cv.map((cvPart) => {
@@ -270,39 +288,41 @@ export default function resumeCompiler(props) {
             stack: [
               { text: cvPart.title, style: "header" },
               // divider
-              {
-                canvas: [
-                  {
-                    type: "line",
-                    x1: 0,
-                    y1: 0,
-                    x2: innerPageWidth,
-                    y2: 0,
-                    lineWidth: 0.8,
-                    lineColor: color,
-                  },
-                ],
-              },
+              // {
+              //   canvas: [
+              //     {
+              //       type: "line",
+              //       x1: 0,
+              //       y1: 0,
+              //       x2: innerPageWidth,
+              //       y2: 0,
+              //       lineWidth: 0.8,
+              //       lineColor: color,
+              //     },
+              //   ],
+              // },
               getChild(
                 cvPart.children[0],
                 cvPart.mini,
-                cvPart.children.length == 1
+                cvPart.children.length == 1,
+                separator
               ),
             ],
           },
           // rest of children
           ...(cvPart.children.length - 1
             ? [
-                cvPart.children
-                  .slice(1, cvPart.children.length)
-                  .map((child, i) =>
-                    getChild(
-                      child,
-                      cvPart.mini,
-                      i == cvPart.children.length - 2
-                    )
-                  ),
-              ]
+              cvPart.children
+                .slice(1, cvPart.children.length)
+                .map((child, i) =>
+                  getChild(
+                    child,
+                    cvPart.mini,
+                    i == cvPart.children.length - 2,
+                    separator
+                  )
+                ),
+            ]
             : []),
         ];
       }),
