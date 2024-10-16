@@ -23,7 +23,7 @@ export default [
         body: "* " + [
           "Ported all vision ML models to ONNX and __TensorRT__, __tripling__ pipeline speed and reducing VRAM usage by __15%__",
           "Implemented batched inference, increasing system speed by __30%__ on resource-constrained hardware",
-          "Led efforts to prototype innovative CV/ML experiences, staying up-to-date with the latest research",
+          "Lead efforts to prototype CV/ML systems using the latest state-of-the-art advances",
           "Redesigned ML architecture for modularity and flexibility, and led efforts to clean up technical debt",
           "Co-managed and mentored the ML team, integrating teams and enforcing best practices",
           "Built monitoring tools for vision pipeline performance, enhancing observability and alerting capabilities",
@@ -41,7 +41,7 @@ export default [
           "Optimized real-time person detection and pose estimation pipeline, reducing latency by __24%__, VRAM usage by __45%__, and increased accuracy by __10%__",
           "Designed, prototyped, tuned, and deployed a face recognition system with a false-positive rate below __5%__",
           "Drove real-time inference optimization efforts, __tripling__ the number of supported systems per hardware unit",
-          "Collaborated with the product team to prototype and experiment with CV/ML systems for novel user experiences and features",
+          "Collaborated with the product team to prototype and experiment with CV/ML systems for novel user experiences",
           "Received recognition for achieving the highest business impact among all engineers in 2022",
           "Enhanced expertise in __ROS__, __C++__, __Python__, __PyTorch__, __OpenCV__, __CUDA__, __Docker__, CI/CD, SDLC, and monitoring",
         ].join("\n* "),
@@ -55,7 +55,7 @@ export default [
         ],
         date: "2020 - 2021 (6 months)",
         body: "* " + [
-          "Designed and maintained a scalable end-to-end data pipeline, and led development using __Databricks__, __Spark__, and CI/CD",
+          "Designed and maintained a scalable data pipeline, and led development using __Databricks__, __Spark__, and CI/CD",
           "Managed the ML model lifecycle, from data ingestion to deployment, utilizing __Pandas__, __MLflow__, __Azure__, __Docker__, and __Kubernetes__",
         ].join("\n* "),
       }),
@@ -64,7 +64,7 @@ export default [
         subtitles: ["Freelancer", "Remote"],
         date: "2019 - 2020 (1 year)",
         body: "* " + [
-          "Designed, prototyped, trained, and deployed a CNN-based face predictor using __TensorFlow__ and __scikit-learn__, achieving an __18%__ improvement in accuracy and optimizing it for low-latency inference",
+          "Designed, prototyped, trained, and deployed a CNN-based face predictor using __TensorFlow__ and __scikit-learn__, achieved an __18%__ improvement in accuracy and optimized it for low-latency inference",
           "Designed a cross-platform architecture using __Cordova__, __React Native__, __React.js__, and __Electron__ for the frontend; deployed scalable microservices to __AWS__ with __Python__/__Flask__, __PostgreSQL__, and proxies",
         ].join("\n* "),
       }),
