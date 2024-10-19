@@ -19,7 +19,7 @@ export default [
       cvChild({
         title: "Senior Machine Learning Engineer",
         subtitles: ["QSC", "Zurich, CH", "Remote"],
-        date: "2023 - Present (1.5 years)",
+        date: "2023 - Present (1 yr 6 mos)",
         body: "* " + [
           "Ported all vision ML models to ONNX and __TensorRT__, __tripling__ pipeline speed and reducing VRAM usage by __15%__",
           "Implemented batched inference, increasing system speed by __30%__ on resource-constrained hardware",
@@ -36,7 +36,7 @@ export default [
           "Zurich, CH",
           "Remote",
         ],
-        date: "2021 - 2023 (2 years)",
+        date: "2021 - 2023 (2 yrs)",
         body: "* " + [
           "Optimized real-time person detection and pose estimation pipeline, reducing latency by __24%__, VRAM usage by __45%__, and increased accuracy by __10%__",
           "Designed, prototyped, tuned, and deployed a face recognition system with a false-positive rate below __5%__",
@@ -53,7 +53,7 @@ export default [
           "Barcelona, ES",
           "Hybrid",
         ],
-        date: "2020 - 2021 (6 months)",
+        date: "2020 - 2021 (6 mos)",
         body: "* " + [
           "Designed and maintained a scalable data pipeline, and led development using __Databricks__, __Spark__, and CI/CD",
           "Managed the ML model lifecycle, from data ingestion to deployment, utilizing __Pandas__, __MLflow__, __Azure__, __Docker__, and __Kubernetes__",
@@ -62,7 +62,7 @@ export default [
       cvChild({
         title: "Full-Stack & Machine Learning Engineer",
         subtitles: ["Freelancer", "Remote"],
-        date: "2019 - 2020 (1.5 years)",
+        date: "2019 - 2020 (1 yr 4 mos)",
         body: "* " + [
           "Designed, prototyped, trained, and deployed a CNN-based face predictor using __TensorFlow__ and __scikit-learn__, achieved an __18%__ improvement in accuracy and optimized it for low-latency inference",
           "Designed a cross-platform architecture using __Cordova__, __React Native__, __React.js__, and __Electron__ for the frontend; deployed scalable microservices to __AWS__ with __Python__/__Flask__, __PostgreSQL__, and proxies",
@@ -71,7 +71,7 @@ export default [
       cvChild({
         title: "Control Systems Engineer, Intern",
         subtitles: ["Rapyuta Robotics (ETHZ Spin-off)", "Tokyo, JP", "On-site"],
-        date: "2016 - 2017 (1 year)",
+        date: "2016 - 2017 (1 yr)",
         body: "* Achieved a __55x__ speedup of __NumPy__-heavy simulation iterations and open-sourced the __Python__ package <a href='https://github.com/wolfv/pyjet' target='_blank'>PyJet</a>\n* Designed energy estimators for a multicopter using a Kalman Filter (EKF), __Python__, __SciPy__, and __C++__\n* Enhanced a setpoint tracking controller and performed sensor tests for a multicopter using __C++__ and __Python__",
       }),
     ],
@@ -82,7 +82,7 @@ export default [
       cvChild({
         title: "Imperial College London",
         subtitles: ["Master's Thesis", "London, UK"],
-        date: "2018 - 2019 (7 months)",
+        date: "2018 - 2019 (7 mos)",
         body: "* " + [
           "Pioneered an online multi-task CNN deep learning architecture for object instance prediction, human pose estimation, instance masking, as well as multi-person tracking",
           "Trained the visual cue-matching head of a Siamese network using Mask R-CNN outputs on the MOT dataset",
@@ -92,7 +92,7 @@ export default [
       cvChild({
         title: "ETH Zurich",
         subtitles: ["MSc Robotics, Systems & Control", "Zurich, CH"],
-        date: "2017 - 2019 (2 years)",
+        date: "2017 - 2019 (2 yrs)",
         body: "* " + [
           "Showed that an additional depth input channel improved the segmentation accuracy of Mask R-CNN by __31%__",
           "Designed a time-efficient training strategy using data augmentation, pretraining on synthetic RGB-D data, and fine-tuning on real-world data",
@@ -102,7 +102,7 @@ export default [
       cvChild({
         title: "ETH Zurich",
         subtitles: ["BSc Mechanical Engineering", "Zurich, CH"],
-        date: "2012 - 2016 (3.5 years)",
+        date: "2012 - 2016 (3 yrs 6 mos)",
         body: "* " + [
           "Graduated with more than two standard deviations above the average (top __5%__)",
           "Implemented balancing maneuvers for the [Omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) to demonstrate its 6DoF flying versatility",
