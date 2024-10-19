@@ -62,7 +62,7 @@ export default [
       cvChild({
         title: "Full-Stack & Machine Learning Engineer",
         subtitles: ["Freelancer", "Remote"],
-        date: "2019 - 2020 (1 yr 4 mos)",
+        date: "2019 - 2020 (1 yr 3 mos)",
         body: "* " + [
           "Designed, prototyped, trained, and deployed a CNN-based face predictor using __TensorFlow__ and __scikit-learn__, achieved an __18%__ improvement in accuracy and optimized it for low-latency inference",
           "Designed a cross-platform architecture using __Cordova__, __React Native__, __React.js__, and __Electron__ for the frontend; deployed scalable microservices to __AWS__ with __Python__/__Flask__, __PostgreSQL__, and proxies",
@@ -82,7 +82,7 @@ export default [
       cvChild({
         title: "Imperial College London",
         subtitles: ["Master's Thesis", "London, UK"],
-        date: "2018 - 2019 (7 mos)",
+        date: "2018 - 2019 (6 mos)",
         body: "* " + [
           "Pioneered an online multi-task CNN deep learning architecture for object instance prediction, human pose estimation, instance masking, as well as multi-person tracking",
           "Trained the visual cue-matching head of a Siamese network using Mask R-CNN outputs on the MOT dataset",
