@@ -25,7 +25,7 @@ export default [
           "Implemented batched inference, increasing system speed by __30%__ on resource-constrained hardware",
           "Led efforts to prototype CV/ML systems using the latest state-of-the-art advances",
           "Redesigned ML architecture for modularity and flexibility, and led efforts to clean up technical debt",
-          "Co-managed and mentored the ML team, integrating teams and enforcing best practices",
+          "Co-managed and mentored the ML team, integrated teams, enforced best practices, and led the hiring process",
           "Built monitoring tools for vision pipeline performance, enhancing observability and alerting capabilities",
         ].join("\n* "),
       }),
