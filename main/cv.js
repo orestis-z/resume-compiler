@@ -19,7 +19,7 @@ export default [
       cvChild({
         title: "Senior Machine Learning Engineer",
         subtitles: ["QSC", "Zurich, CH", "Remote"],
-        date: "2023 - Present (1 year)",
+        date: "2023 - Present (1.5 years)",
         body: "* " + [
           "Ported all vision ML models to ONNX and __TensorRT__, __tripling__ pipeline speed and reducing VRAM usage by __15%__",
           "Implemented batched inference, increasing system speed by __30%__ on resource-constrained hardware",
@@ -62,7 +62,7 @@ export default [
       cvChild({
         title: "Full-Stack & Machine Learning Engineer",
         subtitles: ["Freelancer", "Remote"],
-        date: "2019 - 2020 (1 year)",
+        date: "2019 - 2020 (1.5 years)",
         body: "* " + [
           "Designed, prototyped, trained, and deployed a CNN-based face predictor using __TensorFlow__ and __scikit-learn__, achieved an __18%__ improvement in accuracy and optimized it for low-latency inference",
           "Designed a cross-platform architecture using __Cordova__, __React Native__, __React.js__, and __Electron__ for the frontend; deployed scalable microservices to __AWS__ with __Python__/__Flask__, __PostgreSQL__, and proxies",
