@@ -7,66 +7,141 @@ export const profile = {
   address: "CH-4103 Bottmingen",
   phone: "+41 78 637 35 91",
   email: "[me@orestisz.com](mailto:me@orestisz.com)",
+  permit: "Swiss Citizen",
   programmingLanguages:
-    "[github.com/orestis-z](https://github.com/orestis-z)\n\nReact-Native Development, Full-Stack, Distributed Systems, Machine Learning",
+    "[github.com/orestis-z](https://github.com/orestis-z), [linkedin.com/in/orestis-z](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision, Machine Learning Engineering, MLOps, Full-Stack Development",
 };
 
 export default [
   {
     title: "Experience",
     children: [
-      cvChild(
-        "Web App Developer",
-        ["Civil service", "Kantonsspital St.Gallen"],
-        ["May 2020", "Jul 2020"],
-        "* Developed new features and maintained a web application using __Vue.js__, ensuring quality with end-to-end testing using __TestCafe__\n*  Implemented web analytics and customer feedback tools to measure KPIs, and optimized search results appearance with SEO techniques to improve user engagement"
-      ),
-      cvChild(
-        "Full-Stack Engineer",
-        ["Self-employed", "Global (Digital Nomad)"],
-        ["Feb 2019", "May 2020"],
-        "* Developed and marketed an end-to-end cloud-based AI-powered app, using __TensorFlow__ and __scikit-learn__ to modify and retrain a CNN on a face dataset resulting in an __18%__ improvement in accuracy, and productionized the model for real-time inference\n* Designed cross-platform frontend using __Cordova__, __React Native__, __React.js__, and __Electron__, and deployed scalable microservices to __AWS__ with __Python__/__Flask__, __PostgreSQL__, and proxies"
-      ),
-      cvChild(
-        "Mobile App Developer",
-        ["nextron internet team", "Part-time", "Basel, Switzerland"],
-        ["Sep 2017", "Aug 2018"],
-        "*  Developed a cross-platform mobile app for <a href='https://www.explora.ch/'>explora.ch</a> using __React Native__, significantly improving the platform's mobile adaptation and enhancing the user experience\n* Successfully released the app, which garnered over 2,000 downloads and a 5-star rating"
-      ),
-      cvChild(
-        "Junior Mobile App Developer",
-        ["ETH Juniors", "Part-time", "Basel, Switzerland"],
-        ["Dec 2016", "Jul 2017"],
-        "* Built a React Native mobile app with Firebase, realizing a novel business idea for a private customer and demonstrating cross-platform design and cloud-based proficiency"
-      ),
+      cvChild({
+        title: "Senior Machine Learning Engineer",
+        subtitles: ["QSC", "Zurich, Switzerland", "Remote"],
+        date: "Jul 2023 - Present",
+        body:
+          "* " +
+          [
+            "Optimized vision ML models with __ONNX__ and __TensorRT__, __tripling__ pipeline speed and reducing VRAM usage by __15%__.",
+            "Implemented batched inference, boosting system speed by __30%__ on resource-constrained hardware.",
+            "Developed monitoring tools to improve system observability and alerting, utilizing __Grafana__ and __InfluxDB__.",
+            "Redesigned ML architecture for greater modularity and reduced technical debt.",
+            "Led CV/ML prototyping driven by the state of the art and benchmarked DL models.",
+            "Co-managed ML team, enforced best practices, integrated teams, and led hiring.",
+          ].join("\n* "),
+      }),
+      cvChild({
+        title: "Machine Learning Engineer",
+        subtitles: ["Seervision AG", "Zurich, Switzerland", "Remote"],
+        date: "Aug 2021 - Jul 2023",
+        body:
+          "* " +
+          [
+            "Enhanced real-time person detection pipeline, reducing latency by __24%__ and improving accuracy by __10%__.",
+            "Deployed a face recognition system with a false-positive rate below __5%__.",
+            "Tripled supported systems per hardware unit via real-time inference optimization.",
+            "Collaborated with product teams to prototype new CV/ML features.",
+            "Recognized for achieving the highest business impact in 2022.",
+            "Enhanced expertise in __Python__, __C++__, __PyTorch__, __OpenCV__, __CUDA__, __Docker__, GitLab __CI/CD__, __GCP__ and monitoring.",
+          ].join("\n* "),
+      }),
+      cvChild({
+        title: "MLOps Engineer",
+        subtitles: ["benshi.ai", "Barcelona, Spain", "Hybrid"],
+        date: "Nov 2020 - Jun 2021",
+        body:
+          "* " +
+          [
+            "Designed and maintained scalable data pipelines using __Databricks__, __Spark__, and __CI/CD__.",
+            "Managed ML model lifecycle from data ingestion to deployment using __Docker__, __Kubernetes__, and __Azure__.",
+          ].join("\n* "),
+      }),
+      cvChild({
+        title: "Web App Developer (Civil Service)",
+        subtitles: ["Kantonsspital St.Gallen", "St Gallen, Switzerland", "On-site"],
+        date: "May 2020 - Jul 2020",
+        body:
+          "* " +
+          [
+            "Developed and maintained a web application using __Vue.js__, with end-to-end testing via __TestCafe__.",
+            "Implemented web analytics and feedback tools to measure KPIs; optimized search results with __SEO__.",
+          ].join("\n* "),
+      }),
+      cvChild({
+        title: "Full-Stack & Machine Learning Engineer",
+        subtitles: ["Self-employed", "Remote"],
+        date: "Feb 2019 - May 2020",
+        body:
+          "* " +
+          [
+            "Developed and deployed a CNN-based face predictor with an __18%__ accuracy improvement.",
+            "Designed a cross-platform architecture using __Cordova__, __React Native__, and Python/__Flask__ microservices on __AWS__.",
+          ].join("\n* "),
+      }),
     ],
   },
   {
     title: "Education",
     children: [
-      cvChild(
-        "ETH Zurich",
-        ["MSc Robotics, Systems & Control (5.25/6.0)", "Zurich, Switzerland"],
-        ["Feb 2017", "Mar 2019"],
-        "Semester thesis (5.75/6.0):\n\n* Introduced a method to boost the scene understanding for robotic systems equipped with RGB-D sensors\n* Showed that an additional depth input channel improves the segmentation accuracy of Mask R-CNN by __31%__\n* Submitted a paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__ and __Python__"
-      ),
-      cvChild(
-        "ETH Zurich",
-        ["BSc Mechanical Engineering (5.51/6.0)", "Zurich, Switzerland"],
-        ["Sep 2012", "Feb 2016"],
-        "* Graduated with more than two standard deviations above the average (top __5%__)\n\nBachelor’s thesis (5.75/6.0):\n* Implemented balancing manoeuvres for the [Omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) to demonstrate its 6DoF flying versatility\n* Derived the system dynamics, synthesised non-linear attitude control algorithms and a Kalman filter using quaternions, __C++__ and __MATLAB__ / __Simulink__"
-      ),
+      cvChild({
+        title: "ETH Zurich",
+        subtitles: ["MSc Robotics, Systems & Control", "Zurich, Switzerland"],
+        date: "2017 - 2019",
+        body:
+          "* " +
+          [
+            "Graduated with a Swiss grade of __5.25/6__.",
+            "Master's thesis on an online multi-task Siamese CNN deep learning model.",
+            "Semester thesis on improving segmentation accuracy of Mask R-CNN by __31%__ using additional depth input.",
+            "Leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__, __Python__, and __CUDA C/C++__.",
+          ].join("\n* "),
+      }),
+      cvChild({
+        title: "ETH Zurich",
+        subtitles: ["BSc Mechanical Engineering", "Zurich, Switzerland"],
+        date: "2012 - 2016",
+        body:
+          "* " +
+          [
+            "Graduated with a Swiss grade of __5.51/6__ (top __5%__).",
+            "Implemented balancing maneuvers for the [Omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) to demonstrate 6DoF flying versatility.",
+            "Derived system dynamics and synthesized non-linear attitude control algorithms using __C++__ and __MATLAB__/__Simulink__.",
+          ].join("\n* "),
+      }),
     ],
   },
   {
     title: "Projects",
+    mini: true,
     children: [
-      cvChild(
-        "Mobile Apps",
-        null,
-        null,
-        "* Created mobile apps with __React Native__ and __Cordova__, and published them on the <a href='https://play.google.com/store/apps/dev?id=9048439414196271506'>Play Store</a>"
-      ),
+      cvChild({
+        title: "Beachin' Rentals",
+        date: "2023 - Present",
+        body:
+          "Self-service kiosk built using __Flask__, __Stripe__, __Shopify__, __RasPi__, __RS-485__.",
+        subtitles: ["_[Link](https://g.co/kgs/B73qiZx)_"],
+      }),
+      cvChild({
+        title: "Trap the Cat",
+        date: "2023 - 2024",
+        body:
+          "App built with __JavaScript__, __CapacitorJS__ and __Firebase__, with __100k+__ downloads.",
+        subtitles: ["_[Link](https://play.google.com/store/apps/details/Chat_Noir_Hexagon?id=com.kima.chatnoirhex)_"],
+      }),
+      cvChild({
+        title: "Anti CryptoPunks",
+        date: "2022",
+        body:
+          "NFT project built on the __Polygon__ blockchain, with __6 ETH__ traded.",
+        subtitles: ["_[Link](https://anticryptopunks.com)_"],
+      }),
+      cvChild({
+        title: "PyJet",
+        date: "2015",
+        body: "Python library converting __Python/NumPy__ operations to __C++__, achieving a __55x__ speedup.",
+        subtitles: ["_[Link](https://github.com/wolfv/pyjet)_"],
+      }),
     ],
   },
 ];

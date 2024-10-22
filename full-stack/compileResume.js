@@ -3,16 +3,19 @@ import cv, { profile } from "./cv.js";
 
 const fonts = {
   defaultFont: {
-    normal: "example/fonts/SalvoSans-Light2.ttf",
-    italics: "example/fonts/SalvoSans-Light-Italic.ttf",
-    bold: "example/fonts/SalvoSans-Medium2.ttf",
+    // normal: "example/fonts/SalvoSans-Light2.ttf",
+    // italics: "example/fonts/SalvoSans-Light-Italic.ttf",
+    // bold: "example/fonts/SalvoSans-Medium2.ttf",
+    normal: "example/fonts/OpenSans-Regular.ttf",
+    italics: "example/fonts/OpenSans-Italic.ttf",
+    bold: "example/fonts/OpenSans-Bold.ttf",
   },
   childTitleFont: {
-    bold: "example/fonts/SalvoSans-Bold.ttf",
+    bold: "example/fonts/Roboto-Bold.ttf",
   },
   headerFont: {
-    bold: "example/fonts/Barlow-Bold.ttf",
-    bolditalics: "example/fonts/Barlow-Bolditalic.ttf",
+    bold: "example/fonts/Roboto-Bold.ttf",
+    bolditalics: "example/fonts/Roboto-BoldItalic.ttf",
   },
 };
 
@@ -22,13 +25,14 @@ resumeCompiler({
   cv,
   profile,
   fonts,
-  lineHeight: 0.94,
-  mainTitleSize: 24,
-  subtitleSize: 11.3,
-  headerSize: 13.5,
-  fontSize: 9,
-  paragraphFactor: 1.1,
-  pageMargins: [60 * factor, 65 * factor, 60 * factor, 65 * factor],
+  lineHeight: 1.1,
+  mainTitleSize: 15.5,
+  subtitleSize: 9.2,
+  headerSize: 11.5,
+  fontSize: 8.6,
+  paragraphFactor: 0.8,
+  pageMargins: [60 * factor, 68 * factor, 60 * factor, 68 * factor],
   unbreakableChildren: true,
   google: true,
+  separator: " · ",
 });

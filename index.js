@@ -124,9 +124,9 @@ export default function resumeCompiler(props) {
           stack: [
             {
               layout,
-              margin: [0, 4 * paragraphFactor, 0, 1 * paragraphFactor, 0],
+              margin: [0, 4 * paragraphFactor, 0, 1 * paragraphFactor],
               table: {
-                // widths: [0.17 * PAGE_WIDTH, "*", 0.1 * PAGE_WIDTH],
+                widths: [PAGE_WIDTH - pageMargins[0] - pageMargins[2] - 10],
                 body: [
                   [
                     // {
@@ -134,19 +134,12 @@ export default function resumeCompiler(props) {
                     // },
                     {
                       text: markdownToPdfMakeUnstyledLink(
-                        child.date + `${separator}<b>${child.title}</b>` + (child.subtitles ? separator + child.subtitles.join(separator) : ""),
-                        {p: {decoration: "underline"}}
+                        `<span style="decoration: underline">${child.date}${separator}<b>${child.title}</b>${(child.subtitles ? separator + child.subtitles.join(separator) : "")}</span>${(mini ? " " + child.body : "")}`,
                       ),
                       // bold: true,
                       // font: "childTitleFont",
                       alignment: "left",
-                      margin: [0, 0, 0, child.meta ? -4 : -2],
-                    },
-                    {
-                      text: child.meta ? child.meta.join(" - ") : "",
-                      italics: true,
-                      alignment: "right",
-                      margin: [0, 0, 0, child.meta ? -4 : -2],
+                      margin: [0, 0, 0,  mini ? -6 :-2],
                     },
                   ],
                   // ...(child.subtitles
@@ -166,22 +159,22 @@ export default function resumeCompiler(props) {
                 ],
               },
             },
-            ...(mini
-              ? [
-                {
-                  text:
-                    child.subtitles &&
-                    markdownToPdfMake(child.subtitles.join(", ")),
-                  lineHeight: largeLineHeight,
-                  margin: [
-                    0,
-                    0,
-                    0,
-                    (child.subtitles ? -2 : 1) * paragraphFactor,
-                  ],
-                },
-              ]
-              : []),
+            // ...(mini
+            //   ? [
+            //     {
+            //       text:
+            //         child.subtitles &&
+            //         markdownToPdfMake(child.subtitles.join(", ")),
+            //       lineHeight: largeLineHeight,
+            //       margin: [
+            //         0,
+            //         0,
+            //         0,
+            //         (child.subtitles ? -2 : 1) * paragraphFactor,
+            //       ],
+            //     },
+            //   ]
+            //   : []),
           ],
         },
         // child body
@@ -388,7 +381,7 @@ function resumeCompilerPlain(cv) {
         .map(
           (child) =>
             `${child.title}\n${child.subtitles
-              .concat(child.meta)
+              .concat([child.date])
               .join(" · ")}\n${child.body}`
         )
         .join("\n\n");
