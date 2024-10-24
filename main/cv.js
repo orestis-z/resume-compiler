@@ -23,7 +23,7 @@ export default [
         body: "* " + [
           "Ported all vision ML models to ONNX and __TensorRT__, __tripling__ pipeline speed and reducing VRAM usage by __15%__.",
           "Implemented batched inference, increasing system speed by __30%__ on resource-constrained hardware.",
-          "Led prototyping of CV/ML systems in person/pose detection, visual embeddings, and VLMs using SOTA advancements.",
+          "Led prototyping of CV/ML systems in person detection and tracking, visual embeddings, and VLMs using SOTA.",
           "Redesigned ML architecture for modularity and flexibility, and led efforts to clean up technical debt.",
           "Co-managed and mentored the ML team, integrated teams, enforced best practices, and led the hiring process.",
           "Developed evaluation and monitoring tools for the ML pipeline using __Grafana__, __InfluxDB__, and __Weights & Biases__.",
