@@ -35,4 +35,5 @@ resumeCompiler({
   unbreakableChildren: true,
   google: true,
   separator: " · ",
+  filePath: `output/Orestis_Zambounis_ML_Full_Stack.pdf`,
 });
