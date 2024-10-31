@@ -18,15 +18,15 @@ export default [
     children: [
       cvChild({
         title: "Senior Machine Learning Engineer",
-        subtitles: ["QSC", "Zurich, CH", "Remote"],
+        subtitles: ["(QSC, acq. by Acuity Brands)", "Zurich, CH", "Remote"],
         date: "2023 - Present (1 yr 6 mos)",
         body: "* " + [
-          "Ported all vision ML models to ONNX and __TensorRT__, __tripling__ pipeline speed and reducing VRAM usage by __15%__.",
-          "Implemented batched inference, increasing system speed by __30%__ on resource-constrained hardware.",
-          "Led prototyping of CV/ML systems in person detection and tracking, visual embeddings, and VLMs using SOTA.",
+          "Ported vision ML models to ONNX and TensorRT, __tripling__ speed and reducing VRAM usage by __15%.__",
+          "Increased system speed by __30%__ on resource-constrained hardware through batched inference implementation.",
+          "Led CV/ML prototyping in detection, tracking, embeddings, and VLMs with state-of-the-art methods.",
           "Redesigned ML architecture for modularity and flexibility, and led efforts to clean up technical debt.",
           "Co-managed and mentored the ML team, integrated teams, enforced best practices, and led the hiring process.",
-          "Developed evaluation and monitoring tools for the ML pipeline using __Grafana__, __InfluxDB__, and __Weights & Biases__.",
+          "Technologies: __Python__, __PyTorch__, __TensorRT__, __ONNX__, __Weights & Biases__, __Grafana__, __ROS__, __Docker__, __GCP__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -38,12 +38,12 @@ export default [
         ],
         date: "2021 - 2023 (2 yrs)",
         body: "* " + [
-          "Optimized real-time person detection and pose estimation pipeline, reducing latency by __24%__, VRAM usage by __45%__, and increased accuracy by __10%__.",
+          "Optimized real-time detection pipeline, reduced latency by __24%__, VRAM by __45%__, and increased accuracy by __10%__.",
           "Designed, prototyped, tuned, and deployed a face recognition system with a false-positive rate below __5%__.",
-          "Drove real-time inference optimization efforts, __tripling__ the number of supported systems per hardware unit.",
+          "Drove real-time inference optimization efforts, __tripling__ the number of supported clients per hardware unit.",
           "Collaborated with the product team to prototype and experiment with CV/ML systems for novel user experiences.",
-          "Received recognition for achieving the highest business impact among all engineers in 2022.",
-          "Enhanced expertise in __ROS__, __C++__, __Python__, __PyTorch__, __OpenCV__, __CUDA__, __Docker__, GitLab CI/CD, SDLC, and monitoring.",
+          "Recognized for highest engineering business impact in 2022.",
+          "Technologies: __Python__, __C++__, __PyTorch__, __TensorFlow__, __OpenCV__, __CUDA__, __ROS__, __Docker__, __GitLab CI/CD__, __GCP__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -55,8 +55,8 @@ export default [
         ],
         date: "2020 - 2021 (6 mos)",
         body: "* " + [
-          "Designed and maintained a scalable data pipeline, and led development using __Databricks__, __Spark__, and CI/CD.",
-          "Managed the ML model lifecycle, from data ingestion to deployment, utilizing __Pandas__, __MLflow__, __Azure__, __Docker__, and __Kubernetes__.",
+          "Built and maintained scalable data pipelines for ML models in production, from data ingestion to deployment.",
+          "Technologies: __Python__, __Pandas__, __PySpark__, __Databricks__, __MLflow__, __Docker__, __Kubernetes__, __Azure__, __GitHub Actions__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -64,15 +64,20 @@ export default [
         subtitles: ["Freelancer", "Remote"],
         date: "2019 - 2020 (1 yr 3 mos)",
         body: "* " + [
-          "Designed, prototyped, trained, and deployed a CNN-based face predictor using __TensorFlow__ and __scikit-learn__, achieved an __18%__ improvement in accuracy and optimized it for low-latency inference.",
-          "Designed a cross-platform architecture using __Cordova__, __React Native__, __React.js__, and __Electron__ for the frontend; deployed scalable microservices to __AWS__ with __Python__/__Flask__, __PostgreSQL__, and proxies.",
+          "Developed a CNN-based face predictor with an __18%__ accuracy improvement, optimized for low-latency inference.",
+          "Developed full-stack application with cross-platform frontend and microservice-based cloud architecture.",
+          "Technologies: __Python__, __TensorFlow__, __scikit-learn__, __Flask__, __React__, __PostgreSQL__, __AWS__.",
         ].join("\n* "),
       }),
       cvChild({
         title: "Control Systems Engineer, Intern",
         subtitles: ["Rapyuta Robotics (ETHZ Spin-off)", "Tokyo, JP", "On-site"],
         date: "2016 - 2017 (1 yr)",
-        body: "* Achieved a __55x__ speedup of __NumPy__-heavy simulation iterations and open-sourced the __Python__ package <a href='https://github.com/wolfv/pyjet' target='_blank'>PyJet</a>.\n* Designed energy estimators for a multicopter using a Kalman Filter (EKF), __Python__, __SciPy__, and __C++__\n* Enhanced a setpoint tracking controller and performed sensor tests for a multicopter using __C++__ and __Python__.",
+        body: "* " + [
+          "Achieved a __55x speedup__ of NumPy-heavy simulation iterations and open-sourced the Python package <a href='https://github.com/wolfv/pyjet' target='_blank'>PyJet</a>.",
+          "Designed energy estimators using a Kalman Filter, enhanced tracking controller and performed sensor tests.",
+          "Technologies: __Python__, __C++__, __NumPy__, __SciPy__, __ROS__.",
+        ].join("\n* "),
       }),
     ],
   },
@@ -84,9 +89,9 @@ export default [
         subtitles: ["Master's Thesis", "London, UK"],
         date: "2018 - 2019 (6 mos)",
         body: "* " + [
-          "Pioneered an online multi-task CNN deep learning architecture for object instance prediction, human pose estimation, instance masking, as well as multi-person tracking.",
-          "Trained the visual cue-matching head of a Siamese network using Mask R-CNN outputs on the MOT dataset.",
-          "Implemented a CNN using __Caffe2__ and __Python__ including custom operators with __CUDA C/C++__.",
+          "Developed an online multi-task deep learning architecture for object instance prediction, pose estimation, and multi-person tracking.",
+          "Trained the Siamese network for visual cue matching on MOT dataset using Mask R-CNN outputs.",
+          "Technologies: __Python__, __CUDA C/C++__, __Caffe2__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -94,9 +99,9 @@ export default [
         subtitles: ["MSc Robotics, Systems & Control", "Zurich, CH"],
         date: "2017 - 2019 (2 yrs)",
         body: "* " + [
-          "Showed that an additional depth input channel improved the segmentation accuracy of Mask R-CNN by __31%__.",
-          "Designed a time-efficient training strategy using data augmentation, pretraining on synthetic RGB-D data, and fine-tuning on real-world data.",
-          "Submitted paper to CoRL 2018 and leveraged knowledge in __TensorFlow__, __Keras__, __OpenCV__, and __Python__.",
+          "Showed that an additional depth input channel improved the segmentation accuracy of Mask R-CNN by __31%__; submitted paper to CoRL.",
+          "Designed a time-efficient training strategy using data augmentation, synthetic RGB-D and real-world data.",
+          "Technologies: __Python__, __TensorFlow__, __Keras__, __OpenCV__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -104,9 +109,9 @@ export default [
         subtitles: ["BSc Mechanical Engineering", "Zurich, CH"],
         date: "2012 - 2016 (3 yrs 6 mos)",
         body: "* " + [
-          "Graduated with more than two standard deviations above the average (top __5%__).",
-          "Implemented balancing maneuvers for the [Omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) to demonstrate its 6DoF flying versatility.",
-          "Derived system dynamics, synthesized non-linear attitude control algorithms, simulation environment, and a Kalman filter using quaternions, __C++__ and __MATLAB__ / __Simulink__.",
+          "Graduated __top 5%__ of the class.",
+          "Developed balancing algorithms for a 6DoF [omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) using non-linear control methods.",
+          "Technologies: __C++__, __MATLAB__, __Simulink__.",
         ].join("\n* "),
       }),
     ],
