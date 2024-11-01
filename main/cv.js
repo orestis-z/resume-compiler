@@ -42,7 +42,6 @@ export default [
           "Designed, prototyped, tuned, and deployed a face recognition system with a false-positive rate below __5%__.",
           "Drove real-time inference optimization efforts, __tripling__ the number of supported clients per hardware unit.",
           "Collaborated with the product team to prototype and experiment with CV/ML systems for novel user experiences.",
-          "Recognized for highest engineering business impact in 2022.",
           "Technologies: __Python__, __C++__, __PyTorch__, __TensorFlow__, __OpenCV__, __CUDA__, __ROS__, __Docker__, __GitLab CI/CD__, __GCP__.",
         ].join("\n* "),
       }),
