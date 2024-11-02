@@ -160,7 +160,7 @@ export default [
         title: "[Trap the Cat](https://play.google.com/store/apps/details/Chat_Noir_Hexagon?id=com.kima.chatnoirhex)",
         date: "2023 - 2024",
         body:
-          "App built with __JavaScript__, __CapacitorJS__ and __Firebase__, with __100k+__ downloads.",
+          "Mobile app built with __JavaScript__, __CapacitorJS__ and __Firebase__, with __100k+__ downloads.",
       }),
       cvChild({
         title: "[Anti CryptoPunks](https://anticryptopunks.com)",

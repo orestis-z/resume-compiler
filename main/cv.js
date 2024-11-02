@@ -9,7 +9,7 @@ export const profile = {
   email: "[me@orestisz.com](mailto:me@orestisz.com)",
   permit: "Swiss Citizen",
   programmingLanguages:
-    "[GitHub](https://github.com/orestis-z) [LinkedIn](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision, Robotics, Mobile App Development, Full-Stack Development",
+    "[GitHub](https://github.com/orestis-z) [LinkedIn](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision,<br>Robotics, Software Engineering",
 };
 
 export default [
