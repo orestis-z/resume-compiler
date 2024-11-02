@@ -59,8 +59,8 @@ export default [
         ].join("\n* "),
       }),
       cvChild({
-        title: "Full-Stack & Machine Learning Engineer",
-        subtitles: ["Freelancer", "Remote"],
+        title: "Full-Stack Machine Learning Engineer",
+        subtitles: ["Self-employed", "Remote"],
         date: "2019 - 2020 (1 yr 3 mos)",
         body: "* " + [
           "Developed a CNN-based face predictor with an __18%__ accuracy improvement, optimized for low-latency inference.",
