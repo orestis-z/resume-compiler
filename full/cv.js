@@ -18,7 +18,7 @@ export default [
     children: [
       cvChild({
         title: "Senior Machine Learning Engineer",
-        subtitles: ["(QSC, acq. by Acuity Brands)", "Zurich, CH", "Remote"],
+        subtitles: ["QSC (acq. by Acuity Brands)", "Zurich, CH", "Remote"],
         date: "2023 - Present (1 yr 6 mos)",
         body: "* " + [
           "Ported vision ML models to ONNX and TensorRT, __tripling__ speed and reducing VRAM usage by __15%.__",
@@ -73,7 +73,7 @@ export default [
       }),
       cvChild({
         title: "Full-Stack Machine Learning Engineer",
-        subtitles: ["Self-employed", "Remote"],
+        subtitles: ["Self-employed"],
         date: "2019 - 2020 (1 yr 3 mos)",
         body: "* " + [
           "Developed a CNN-based face predictor with an __18%__ accuracy improvement, optimized for low-latency inference.",

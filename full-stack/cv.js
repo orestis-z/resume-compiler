@@ -25,7 +25,7 @@ export default [
           [
             "Optimized vision ML models with __ONNX__ and __TensorRT__, __tripling__ pipeline speed and reducing VRAM usage by __15%__.",
             "Implemented batched inference, boosting system speed by __30%__ on resource-constrained hardware.",
-            "Developed monitoring tools to improve system observability and alerting, utilizing __Grafana__ and __InfluxDB__.",
+            "Developed evaluation and monitoring tools for the ML pipeline using __Grafana__, __InfluxDB__, and __Weights & Biases__.",
             "Redesigned ML architecture for greater modularity and reduced technical debt.",
             "Led CV/ML prototyping driven by the state of the art and benchmarked DL models.",
             "Co-managed ML team, enforced best practices, integrated teams, and led hiring.",
@@ -42,7 +42,6 @@ export default [
             "Deployed a face recognition system with a false-positive rate below __5%__.",
             "Tripled supported systems per hardware unit via real-time inference optimization.",
             "Collaborated with product teams to prototype new CV/ML features.",
-            "Recognized for achieving the highest business impact in 2022.",
             "Enhanced expertise in __Python__, __C++__, __PyTorch__, __OpenCV__, __CUDA__, __Docker__, GitLab __CI/CD__, __GCP__ and monitoring.",
           ].join("\n* "),
       }),
@@ -69,8 +68,8 @@ export default [
           ].join("\n* "),
       }),
       cvChild({
-        title: "Full-Stack & Machine Learning Engineer",
-        subtitles: ["Self-employed", "Remote"],
+        title: "Full-Stack Machine Learning Engineer",
+        subtitles: ["Self-employed"],
         date: "Feb 2019 - May 2020",
         body:
           "* " +
@@ -126,7 +125,7 @@ export default [
         title: "Trap the Cat",
         date: "2023 - 2024",
         body:
-          "App built with __JavaScript__, __CapacitorJS__ and __Firebase__, with __100k+__ downloads.",
+          "Mobile app built with __JavaScript__, __CapacitorJS__ and __Firebase__, with __100k+__ downloads.",
         subtitles: ["_[Link](https://play.google.com/store/apps/details/Chat_Noir_Hexagon?id=com.kima.chatnoirhex)_"],
       }),
       cvChild({
