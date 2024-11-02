@@ -59,6 +59,19 @@ export default [
         ].join("\n* "),
       }),
       cvChild({
+        title: "Web App Developer",
+        subtitles: [
+          "Civil service",
+          "Kantonsspital St. Gallen, CH",
+          "On-site",
+        ],
+        date: "2020 (3 mos)",
+        body: "* " + [
+          "Developed and maintained a web application, implemented web analytics, SEO.",
+          "Technologies: __Vue.js__, __TestCafe__.",
+        ].join("\n* "),
+      }),
+      cvChild({
         title: "Full-Stack & Machine Learning Engineer",
         subtitles: ["Freelancer", "Remote"],
         date: "2019 - 2020 (1 yr 3 mos)",
@@ -66,6 +79,35 @@ export default [
           "Developed a CNN-based face predictor with an __18%__ accuracy improvement, optimized for low-latency inference.",
           "Developed full-stack application with cross-platform frontend and microservice-based cloud architecture.",
           "Technologies: __Python__, __TensorFlow__, __scikit-learn__, __Flask__, __React__, __PostgreSQL__, __AWS__.",
+        ].join("\n* "),
+      }),
+      cvChild({
+        title: "Co-Founder, Product, Tech Lead",
+        subtitles: ["Kimata Networks", "Basel, CH", "Part-time", "Remote"],
+        date: "2018 - 2019 (1 yr 3 mos)",
+        body: "* " + [
+          "Managed a team of 5 developers (frontend and backend), iterated on user feedback, analyzed competitors, and crafted specifications and roadmaps.",
+          "Raised CHF 10k through Venture Kick, gaining experience in company founding, business planning, IP, outsourcing, and strategic decision-making..",
+          "Technologies: __Java__, __Android__, __React Native__, __libGDX__, __OpenGL__.",
+        ].join("\n* "),
+      }),
+      cvChild({
+        title: "Mobile App Developer",
+        subtitles: ["Nextron internet team GmbH", "Basel, CH", "Part-time", "Remote"],
+        date: "2016 - 2017 (6 mos)",
+        body: "* " + [
+          "Developed a cross-platform mobile app for explora.ch.",
+          "Achieved over 2,000 downloads and maintained a __5.0-star__ rating.",
+          "Technologies: __React Native__.",
+        ].join("\n* "),
+      }),
+      cvChild({
+        title: "Junior Mobile App Developer",
+        subtitles: ["ETH juniors", "Zurich, CH", "Part-time", "Remote"],
+        date: "2016 - 2017 (6 mos)",
+        body: "* " + [
+          "Developed a React Native mobile app with Firebase.",
+          "Technologies: __React Native__, __Firebase__.",
         ].join("\n* "),
       }),
       cvChild({

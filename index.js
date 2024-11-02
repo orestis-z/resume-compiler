@@ -95,7 +95,7 @@ export default function resumeCompiler(props) {
           margin: [0, 0, 0, 0],
         },
         ul: { margin: [0, 0, 0, 0] },
-        a: { color: linkColor },
+        a: { color: linkColor, decoration: null},
         ...style,
       },
     });
@@ -133,7 +133,7 @@ export default function resumeCompiler(props) {
                     //   text: child.date,
                     // },
                     {
-                      text: markdownToPdfMakeUnstyledLink(
+                      text: markdownToPdfMake(
                         `<span style="decoration: underline">${child.date}${separator}<b>${child.title}</b>${(child.subtitles ? separator + child.subtitles.join(separator) : "")}</span>${(mini ? " " + child.body : "")}`,
                       ),
                       // bold: true,
@@ -202,7 +202,7 @@ export default function resumeCompiler(props) {
                 {
                   stack: [
                     [{ text: profile.name, style: "title" }],
-                    [markdownToPdfMakeUnstyledLink(profile.email + (profile.permit ? separator + profile.permit : ""))],
+                    [markdownToPdfMake(profile.email + (profile.permit ? separator + profile.permit : ""))],
 
                   ],
                   lineHeight: largeLineHeight,
@@ -374,8 +374,8 @@ export default function resumeCompiler(props) {
   console.log(`Saved to ${path}`);
 }
 
-function resumeCompilerPlain(cv) {
-  const str = cv
+function resumeCompilerPlain(cv, profile) {
+  let str = cv
     .map((cvPart) => {
       const children = cvPart.children
         .map(
@@ -388,6 +388,7 @@ function resumeCompilerPlain(cv) {
       return `${cvPart.title}\n\n${children}`;
     })
     .join("\n\n");
+  str = profile.name + "\n"  + profile.email + "\n" + profile.phone + "\n" + profile.address + "\n" + profile.programmingLanguages + "\n\n" + str;
   return removeMd(str, { stripListLeaders: false }).replaceAll("\n* ", "\n- ");
 }
 
