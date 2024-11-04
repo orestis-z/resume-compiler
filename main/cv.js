@@ -46,7 +46,7 @@ export default [
         ].join("\n* "),
       }),
       cvChild({
-        title: "MLOps Engineer",
+        title: "ML Infrastructure Engineer ",
         subtitles: [
           "benshi.ai (funded by BMGF)",
           "Barcelona, ES",
@@ -54,7 +54,7 @@ export default [
         ],
         date: "2020 - 2021 (6 mos)",
         body: "* " + [
-          "Built and maintained scalable data pipelines for ML models in production, from data ingestion to deployment.",
+          "Built large-scale ML infrastructure and data pipelines for production, from ingestion to deployment.",
           "Technologies: __Python__, __Pandas__, __PySpark__, __Databricks__, __MLflow__, __Docker__, __Kubernetes__, __Azure__, __GitHub Actions__.",
         ].join("\n* "),
       }),
