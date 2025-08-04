@@ -19,7 +19,7 @@ export default [
       cvChild({
         title: "ML Lead <span style='font-weight: normal;'>(prev. Sr. ML Eng.)</span>",
         subtitles: ["QSC (acq. by Acuity Brands)", "Zurich, CH", "Remote"],
-        date: "2023 - Present (1 yr 6 mos)",
+        date: "2023 - Present",
         body: "* " + [
           "**Promoted to ML Lead in December 2024**, leading the team, technical strategy and architecture decisions.",
           "Ported vision ML models to ONNX and TensorRT, __tripling__ speed and reducing VRAM usage by __15%.__",
