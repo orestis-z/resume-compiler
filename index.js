@@ -114,6 +114,15 @@ export default function resumeCompiler(props) {
       ...style
     });
 
+  const processTitle = (title) => {
+    // Replace font-weight: normal spans with a special marker
+    const processedTitle = title.replace(/<span style=['"]font-weight:\s*normal;?['"]>(.*?)<\/span>/gi, '||NORMAL||$1||/NORMAL||');
+    // Wrap the processed title in bold, then restore normal weight parts
+    const boldTitle = `<b>${processedTitle}</b>`;
+    // Convert markers back to spans that will override the bold
+    return boldTitle.replace(/\|\|NORMAL\|\|(.*?)\|\|\/NORMAL\|\|/gi, '</b><span style="font-weight: normal;">$1</span><b>');
+  };
+
   const getChild = (child, mini, last, separator) => [
     {
       unbreakable: unbreakableChildren,
@@ -134,7 +143,7 @@ export default function resumeCompiler(props) {
                     // },
                     {
                       text: markdownToPdfMake(
-                        `<span style="decoration: underline">${child.date}${separator}<b>${child.title}</b>${(child.subtitles ? separator + child.subtitles.join(separator) : "")}</span>${(mini ? " " + child.body : "")}`,
+                        `<span style="decoration: underline">${child.date}${separator}${processTitle(child.title)}${(child.subtitles ? separator + child.subtitles.join(separator) : "")}</span>${(mini ? " " + child.body : "")}`,
                       ),
                       // bold: true,
                       // font: "childTitleFont",
@@ -201,7 +210,19 @@ export default function resumeCompiler(props) {
               [
                 {
                   stack: [
-                    [{ text: profile.name, style: "title" }],
+                    [markdownToPdfMake(profile.name, { 
+                      p: { 
+                        fontSize: mainTitleSize,
+                        margin: [
+                          0,
+                          (subtitleSize - mainTitleSize) * 0.22 * paragraphFactor,
+                          0,
+                          0,
+                        ],
+                        bold: true,
+                        font: "headerFont",
+                      }
+                    })],
                     [markdownToPdfMake(profile.email + (profile.permit ? separator + profile.permit : ""))],
 
                   ],
@@ -242,10 +263,19 @@ export default function resumeCompiler(props) {
                 },
                 {
                   stack: [
-                    {
-                      text: profile.name,
-                      style: "title",
-                    },
+                    markdownToPdfMake(profile.name, { 
+                      p: { 
+                        fontSize: mainTitleSize,
+                        margin: [
+                          0,
+                          (subtitleSize - mainTitleSize) * 0.22 * paragraphFactor,
+                          0,
+                          0,
+                        ],
+                        bold: true,
+                        font: "headerFont",
+                      }
+                    }),
                     {
                       text: profile.title,
                       style: "subtitle",
@@ -380,7 +410,7 @@ function resumeCompilerPlain(cv, profile) {
       const children = cvPart.children
         .map(
           (child) =>
-            `${child.title}\n${child.subtitles
+            `${child.title}\n${(child.subtitles || [])
               .concat([child.date])
               .join(" · ")}\n${child.body}`
         )
