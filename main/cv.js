@@ -17,10 +17,11 @@ export default [
     title: "Experience",
     children: [
       cvChild({
-        title: "Senior Machine Learning Engineer",
+        title: "ML Lead <span style='font-weight: normal;'>(prev. Sr. ML Eng.)</span>",
         subtitles: ["QSC (acq. by Acuity Brands)", "Zurich, CH", "Remote"],
         date: "2023 - Present (1 yr 6 mos)",
         body: "* " + [
+          "**Promoted to ML Lead in December 2024**, leading the team, technical strategy and architecture decisions.",
           "Ported vision ML models to ONNX and TensorRT, __tripling__ speed and reducing VRAM usage by __15%.__",
           "Increased system speed by __30%__ on resource-constrained hardware through batched inference implementation.",
           "Led CV/ML prototyping in detection, tracking, embeddings, and VLMs with state-of-the-art methods.",
