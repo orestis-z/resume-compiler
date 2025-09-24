@@ -22,7 +22,8 @@ export default [
         date: "2023 - Present",
         body: "* " + [
           "**Promoted to ML Lead in December 2024**, leading the team, technical strategy and architecture decisions.",
-          "Ported vision ML models to ONNX and TensorRT, __tripling__ speed and reducing VRAM usage by __15%.__",
+          "Converted single-process architecture to a stage-parallel pipeline, __doubling__ throughput and improving scalability.",
+          "Ported vision ML models to TensorRT and Dali, __tripling__ speed and reducing VRAM usage by __15%.__",
           "Increased system speed by __30%__ on resource-constrained hardware through batched inference implementation.",
           "Led CV/ML prototyping in detection, tracking, embeddings, and VLMs with state-of-the-art methods.",
           "Redesigned ML architecture for modularity and flexibility, and led efforts to clean up technical debt.",
