@@ -26,7 +26,6 @@ export default [
           "Ported vision ML models to TensorRT and Dali, __tripling__ speed and reducing VRAM usage by __15%.__",
           "Increased system speed by __30%__ on resource-constrained hardware through batched inference implementation.",
           "Led CV/ML prototyping in detection, tracking, embeddings, and VLMs with state-of-the-art methods.",
-          "Redesigned ML architecture for modularity and flexibility, and led efforts to clean up technical debt.",
           "Co-managed and mentored the ML team, integrated teams, enforced best practices, and led the hiring process.",
           "Technologies: __Python__, __PyTorch__, __TensorRT__, __ONNX__, __Weights & Biases__, __Grafana__, __ROS__, __Docker__, __GCP__.",
         ].join("\n* "),
