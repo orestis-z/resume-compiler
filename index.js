@@ -140,7 +140,7 @@ export default function resumeCompiler(props) {
                   [
                     {
                       text: markdownToPdfMake(
-                        `<span style="decoration: underline">${processTitle(child.title)}${child.subtitles ? separator + child.subtitles.join(separator) : ""}</span>${mini ? " " + child.body : ""}`
+                        `<span style="decoration: underline">${processTitle(child.title)}${child.subtitles ? separator + child.subtitles.join(separator) : ""}</span>${mini ? ": " + child.body : ""}`
                       ),
                       alignment: "left",
                       margin: [0, 0, 0, mini ? -6 : -2],
