@@ -78,7 +78,8 @@ export default function resumeCompiler(props) {
     unbreakableChildren,
     filePath,
     google,
-    separator
+    separator,
+    separatorSec,
   } = { ...DEFAULT_PROPS, ...props };
   if (pageCountOn) pageMargins[3] += 20;
 
@@ -95,7 +96,7 @@ export default function resumeCompiler(props) {
           margin: [0, 0, 0, 0],
         },
         ul: { margin: [0, 0, 0, 0] },
-        a: { color: linkColor, decoration: null},
+        a: { color: linkColor, decoration: null },
         ...style,
       },
     });
@@ -127,7 +128,6 @@ export default function resumeCompiler(props) {
     {
       unbreakable: unbreakableChildren,
       stack: [
-        // child title and subtitles
         {
           unbreakable: true,
           stack: [
@@ -135,61 +135,38 @@ export default function resumeCompiler(props) {
               layout,
               margin: [0, 4 * paragraphFactor, 0, 1 * paragraphFactor],
               table: {
-                widths: [PAGE_WIDTH - pageMargins[0] - pageMargins[2] - 10],
+                widths: ["*", "auto"],
                 body: [
                   [
-                    // {
-                    //   text: child.date,
-                    // },
                     {
                       text: markdownToPdfMake(
-                        `<span style="decoration: underline">${child.date}${separator}${processTitle(child.title)}${(child.subtitles ? separator + child.subtitles.join(separator) : "")}</span>${(mini ? " " + child.body : "")}`,
+                        `<span style="decoration: underline">${processTitle(child.title)}${child.subtitles ? separator + child.subtitles.join(separator) : ""}</span>${mini ? " " + child.body : ""}`
                       ),
-                      // bold: true,
-                      // font: "childTitleFont",
                       alignment: "left",
-                      margin: [0, 0, 0,  mini ? -6 :-2],
+                      margin: [0, 0, 0, mini ? -6 : -2],
+                    },
+                    {
+                      text: "(" + child.date + ")",
+                      alignment: "right",
+                      margin: [0, 0, 0, mini ? -6 : -2],
                     },
                   ],
-                  // ...(child.subtitles
-                  //   ? [
-                  //       [
-                  //         {
-                  //           colSpan: 2,
-                  //           text: markdownToPdfMakeUnstyledLink(
-                  //             child.subtitles.join(" ∙ ")
-                  //           ),
-                  //         },
-                  //         // "",
-                  //         "",
-                  //       ],
-                  //     ]
-                  //   : []),
                 ],
               },
             },
-            // ...(mini
-            //   ? [
-            //     {
-            //       text:
-            //         child.subtitles &&
-            //         markdownToPdfMake(child.subtitles.join(", ")),
-            //       lineHeight: largeLineHeight,
-            //       margin: [
-            //         0,
-            //         0,
-            //         0,
-            //         (child.subtitles ? -2 : 1) * paragraphFactor,
-            //       ],
-            //     },
-            //   ]
-            //   : []),
           ],
         },
         // child body
-        ...(mini || !child.body ? [] : [["", markdownToPdfMake(child.body, {
-          ul: { margin: [8, 0, 0, 0] },
-        })]]),
+        ...(mini || !child.body
+          ? []
+          : [
+            [
+              "",
+              markdownToPdfMake(child.body, {
+                ul: { margin: [8, 0, 0, 0] },
+              }),
+            ],
+          ]),
         {
           text: "",
           margin: [0, 0, 0, (child.meta || last ? 9 : 4) * paragraphFactor],
@@ -198,6 +175,7 @@ export default function resumeCompiler(props) {
     },
   ];
 
+
   const docDefinition = {
     content: [
       // title including personal information
@@ -205,13 +183,13 @@ export default function resumeCompiler(props) {
         layout,
         table: google
           ? {
-            widths: ["*", innerPageWidth / 1.9],
+            widths: ["*", innerPageWidth / 2.4],
             body: [
               [
                 {
                   stack: [
-                    [markdownToPdfMake(profile.name, { 
-                      p: { 
+                    [markdownToPdfMake(profile.name, {
+                      p: {
                         fontSize: mainTitleSize,
                         margin: [
                           0,
@@ -223,8 +201,7 @@ export default function resumeCompiler(props) {
                         font: "headerFont",
                       }
                     })],
-                    [markdownToPdfMake(profile.email + (profile.permit ? separator + profile.permit : ""))],
-
+                    [markdownToPdfMake((profile.permit ? profile.permit + separatorSec : "") + profile.email + (profile.phone ? separatorSec + profile.phone : ""))],
                   ],
                   lineHeight: largeLineHeight,
                   fontSize: subtitleSize,
@@ -263,8 +240,8 @@ export default function resumeCompiler(props) {
                 },
                 {
                   stack: [
-                    markdownToPdfMake(profile.name, { 
-                      p: { 
+                    markdownToPdfMake(profile.name, {
+                      p: {
                         fontSize: mainTitleSize,
                         margin: [
                           0,
@@ -418,7 +395,7 @@ function resumeCompilerPlain(cv, profile) {
       return `${cvPart.title}\n\n${children}`;
     })
     .join("\n\n");
-  str = profile.name + "\n"  + profile.email + "\n" + profile.phone + "\n" + profile.address + "\n" + profile.programmingLanguages + "\n\n" + str;
+  str = profile.name + "\n" + profile.email + "\n" + profile.phone + "\n" + profile.address + "\n" + profile.programmingLanguages + "\n\n" + str;
   return removeMd(str, { stripListLeaders: false }).replaceAll("\n* ", "\n- ");
 }
 

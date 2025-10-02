@@ -5,11 +5,11 @@ export const profile = {
   title: "MSc ETH Robotics Engineer",
   birthdate: "10.7.1991",
   address: "CH-4103 Bottmingen",
-  phone: "+41 78 637 35 91",
+  phone: "+41786373591",
   email: "[me@orestisz.com](mailto:me@orestisz.com)",
-  permit: "Swiss Citizen",
+  permit: "Swiss Citizen / Resident",
   programmingLanguages:
-    "[GitHub](https://github.com/orestis-z) [LinkedIn](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision,<br>Robotics, Software Engineering",
+    "[GitHub](https://github.com/orestis-z) | [LinkedIn](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision,<br>Robotics, Software Engineering",
 };
 
 export default [
@@ -19,7 +19,7 @@ export default [
       cvChild({
         title: "Senior ML Engineer / Tech Lead",
         subtitles: ["QSC (acq. by Acuity Brands)", "Zurich, CH", "Remote"],
-        date: "2023 - Present",
+        date: "Jul 2023 - Present",
         body: "* " + [
           "**Promoted to ML Tech Lead in Dez. 2024**, leading inference strategy, architecture, optimization and team of 3.",
           "Converted single-process architecture to a stage-parallel pipeline, __doubling__ throughput and improving scalability.",
@@ -36,7 +36,7 @@ export default [
           "Zurich, CH",
           "Remote",
         ],
-        date: "2021 - 2023 (2 yrs)",
+        date: "Aug 2021 - Jul 2023",
         body: "* " + [
           "Optimized real-time detection pipeline, reduced latency by __24%__, VRAM by __45%__, and increased accuracy by __10%__.",
           "Designed, prototyped, tuned, and deployed a face recognition system with a false-positive rate below __5%__.",
@@ -52,7 +52,7 @@ export default [
           "Barcelona, ES",
           "Hybrid",
         ],
-        date: "2020 - 2021 (6 mos)",
+        date: "Nov 2020 - Jun 2021",
         body: "* " + [
           "Built large-scale ML infrastructure and data pipelines for production, from ingestion to deployment.",
           "Technologies: __Python__, __Pandas__, __PySpark__, __Databricks__, __MLflow__, __Docker__, __Kubernetes__, __Azure__, __GitHub Actions__.",
@@ -61,7 +61,7 @@ export default [
       cvChild({
         title: "Full-Stack Machine Learning Engineer",
         subtitles: ["Self-employed"],
-        date: "2019 - 2020 (1 yr 3 mos)",
+        date: "Feb 2019 - Mar 2020",
         body: "* " + [
           "Developed a CNN-based face predictor with an __18%__ accuracy improvement, optimized for low-latency inference.",
           "Developed full-stack application with cross-platform frontend and microservice-based cloud architecture.",
@@ -71,7 +71,7 @@ export default [
       cvChild({
         title: "Control Systems Engineer, Intern",
         subtitles: ["Rapyuta Robotics (ETHZ Spin-off)", "Tokyo, JP", "On-site"],
-        date: "2016 - 2017 (1 yr)",
+        date: "Mar 2016 - Feb 2017",
         body: "* " + [
           "Achieved a __55x speedup__ of NumPy-heavy simulation iterations and open-sourced the Python package <a href='https://github.com/wolfv/pyjet' target='_blank'>PyJet</a>.",
           "Designed energy estimators using a Kalman Filter, enhanced tracking controller and performed sensor tests.",
@@ -86,7 +86,7 @@ export default [
       cvChild({
         title: "MSc Robotics, Systems & Control",
         subtitles: ["5.25/6.0", "ETH", "Zurich, CH"],
-        date: "2017 - 2019 (2 yrs)",
+        date: "2017 - 2019",
         body: "* " + [
           "Developed an online deep learning architecture for object instance prediction, pose estimation, and tracking.",
           "Showed that an additional depth input channel improved the segmentation accuracy of Mask R-CNN by __31%__.",
@@ -96,7 +96,7 @@ export default [
       cvChild({
         title: "BSc Mechanical Engineering",
         subtitles: ["5.51/6.0", "ETH", "Zurich, CH"],
-        date: "2012 - 2016 (3 yrs 6 mos)",
+        date: "2012 - 2016",
         body: "* " + [
           "Developed balancing algorithms for a 6DoF [omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) using non-linear control methods.",
           "Technologies: __C++__, __MATLAB__, __Simulink__.",
