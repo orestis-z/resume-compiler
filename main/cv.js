@@ -17,11 +17,11 @@ export default [
     title: "Experience",
     children: [
       cvChild({
-        title: "ML Lead <span style='font-weight: normal;'>(prev. Sr. ML Eng.)</span>",
+        title: "Senior ML Engineer / Tech Lead",
         subtitles: ["QSC (acq. by Acuity Brands)", "Zurich, CH", "Remote"],
         date: "2023 - Present",
         body: "* " + [
-          "**Promoted to ML Lead in December 2024**, leading the team, technical strategy and architecture decisions.",
+          "**Promoted to ML Tech Lead in Dez. 2024**, leading inference strategy, architecture, optimization and team of 3.",
           "Converted single-process architecture to a stage-parallel pipeline, __doubling__ throughput and improving scalability.",
           "Ported vision ML models to TensorRT and Dali, __tripling__ speed and reducing VRAM usage by __15%.__",
           "Increased system speed by __30%__ on resource-constrained hardware through batched inference implementation.",
@@ -121,7 +121,13 @@ export default [
           "Mobile app built with __JavaScript__, __CapacitorJS__ and __Firebase__, with __100k+__ downloads.",
       }),
       cvChild({
-        title: "[Anti CryptoPunks](https://anticryptopunks.com)",
+        title: "[Machine Dreams](https://orestisz.com/machinedreams/)",
+        date: "2022",
+        body:
+          "Experimental fusion of __AI__ and digital art using __GANs__, creating surreal NFT artworks.",
+      }),
+      cvChild({
+        title: "[Anti CryptoPunks](https://orestisz.com/anticryptopunks)",
         date: "2022",
         body:
           "NFT project built on the __Polygon__ blockchain, with __6 ETH__ traded.",
@@ -129,7 +135,8 @@ export default [
       cvChild({
         title: "[PyJet](https://github.com/wolfv/pyjet)",
         date: "2015",
-        body: "Python library converting __Python/NumPy__ operations to __C++__, achieving a __55x__ speedup.",
+        body:
+          "Python library converting __Python/NumPy__ operations to __C++__, achieving a __55x__ speedup.",
       }),
     ],
   },
