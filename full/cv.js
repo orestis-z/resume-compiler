@@ -6,7 +6,7 @@ export const profile = {
   birthdate: "10.7.1991",
   address: "CH-4103 Bottmingen",
   phone: "+41 78 637 35 91",
-  email: "[me@orestisz.com](mailto:me@orestisz.com)",
+  email: "[info@orestis.ch](mailto:info@orestis.ch)",
   permit: "Swiss Citizen",
   programmingLanguages:
     "[GitHub](https://github.com/orestis-z) [LinkedIn](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision, Robotics, Mobile App Development, Full-Stack Development",
