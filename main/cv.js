@@ -23,10 +23,10 @@ export default [
         body: "* " + [
           "**Promoted to ML Tech Lead in Dez. 2024**, leading inference strategy, architecture, optimization and team of 3.",
           "Converted single-process architecture to a stage-parallel pipeline, __doubling__ throughput and improving scalability.",
-          "Ported vision ML models to TensorRT and Dali, __tripling__ speed and reducing VRAM usage by __15%.__",
+          "Ported vision ML models to TensorRT and DALI, __tripling__ speed and reducing VRAM usage by __15%.__",
           "Increased system speed by __30%__ on resource-constrained hardware through batched inference implementation.",
           "Led CV/ML prototyping in detection, tracking, embeddings, and VLMs with state-of-the-art methods.",
-          "Technologies: __Python__, __PyTorch__, __TensorRT__, __ONNX__, __Weights & Biases__, __Grafana__, __ROS__, __Docker__, __GCP__.",
+          "Technologies: __TensorRT__, __ONNX__, __Weights & Biases__, __Grafana__, __ROS__, __Docker__, __GCP__, __PyTorch__, __Python__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -42,7 +42,7 @@ export default [
           "Designed, prototyped, tuned, and deployed a face recognition system with a false-positive rate below __5%__.",
           "Drove real-time inference optimization efforts, __tripling__ the number of supported clients per hardware unit.",
           "Collaborated with the product team to prototype and experiment with CV/ML systems for novel user experiences.",
-          "Technologies: __Python__, __C++__, __PyTorch__, __TensorFlow__, __OpenCV__, __CUDA__, __ROS__, __Docker__, __GitLab CI/CD__, __GCP__.",
+          "Technologies: __ROS__, __OpenCV__, __CUDA__, __PyTorch__, __TensorFlow__, __Docker__, __GitLab CI/CD__, __GCP__, __Python__, __C++__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -54,8 +54,8 @@ export default [
         ],
         date: "Nov 2020 - Jun 2021",
         body: "* " + [
-          "Built large-scale ML infrastructure and data pipelines for production, from ingestion to deployment.",
-          "Technologies: __Python__, __Pandas__, __PySpark__, __Databricks__, __MLflow__, __Docker__, __Kubernetes__, __Azure__, __GitHub Actions__.",
+          "Built cloud infrastructure enabling large-scale ETL pipelines, data analytics and machine learning applications.",
+          "Technologies: __Databricks__, __PySpark__, __MLflow__, __Docker__, __Kubernetes__, __Azure__, __GitHub Actions__, __Pandas__, __Python__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -65,7 +65,7 @@ export default [
         body: "* " + [
           "Developed a CNN-based face predictor with an __18%__ accuracy improvement, optimized for low-latency inference.",
           "Developed full-stack application with cross-platform frontend and microservice-based cloud architecture.",
-          "Technologies: __Python__, __TensorFlow__, __scikit-learn__, __Flask__, __React__, __PostgreSQL__, __AWS__.",
+          "Technologies: __AWS__, __React__, __Flask__, __PostgreSQL__, __TensorFlow__, __scikit-learn__, __Python__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -75,7 +75,7 @@ export default [
         body: "* " + [
           "Achieved a __55x speedup__ of NumPy-heavy simulation iterations and open-sourced the Python package <a href='https://github.com/wolfv/pyjet' target='_blank'>PyJet</a>.",
           "Designed energy estimators using a Kalman Filter, enhanced tracking controller and performed sensor tests.",
-          "Technologies: __Python__, __C++__, __NumPy__, __SciPy__, __ROS__.",
+          "Technologies: __ROS__, __NumPy__, __SciPy__, __Python__, __C++__.",
         ].join("\n* "),
       }),
     ],
@@ -90,7 +90,7 @@ export default [
         body: "* " + [
           "Developed an online deep learning architecture for object instance prediction, pose estimation, and tracking.",
           "Showed that an additional depth input channel improved the segmentation accuracy of Mask R-CNN by __31%__.",
-          "Technologies: __Python__, __CUDA C/C++__, __TensorFlow__, __Keras__, __Caffe2__, __OpenCV__.",
+          "Technologies: __TensorFlow__, __Keras__, __Caffe2__, __OpenCV__, __CUDA C/C++__, __Python__.",
         ].join("\n* "),
       }),
       cvChild({
@@ -99,7 +99,7 @@ export default [
         date: "2012 - 2016",
         body: "* " + [
           "Developed balancing algorithms for a 6DoF [omnicopter](https://www.youtube.com/watch?v=sIi80LMLJSY) using non-linear control methods.",
-          "Technologies: __C++__, __MATLAB__, __Simulink__.",
+          "Technologies: __MATLAB__, __Simulink__, __C++__.",
         ].join("\n* "),
       }),
     ],
@@ -109,10 +109,10 @@ export default [
     mini: true,
     children: [
       cvChild({
-        title: "[Beachin' Rentals](https://g.co/kgs/B73qiZx)",
+        title: "[Shop Automation](https://orestis.ch/shop-automation)",
         date: "2023 - Present",
         body:
-          "Self-service kiosk built using __Flask__, __Stripe__, __Shopify__, __RasPi__, __RS-485__.",
+          "Self-service IoT system built using __Flask__, __Stripe__, __Shopify__, __RasPi__, __RS-485__.",
       }),
       cvChild({
         title: "[Trap the Cat](https://play.google.com/store/apps/details/Chat_Noir_Hexagon?id=com.kima.chatnoirhex)",
