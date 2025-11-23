@@ -9,7 +9,7 @@ export const profile = {
   email: "[info@orestis.ch](mailto:info@orestis.ch)",
   permit: "Swiss Citizen / Resident",
   programmingLanguages:
-    "[GitHub](https://github.com/orestis-z) | [LinkedIn](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision,<br>Robotics, Software Engineering",
+    "[Portfolio](https://orestis.ch/portfolio) | [GitHub](https://github.com/orestis-z) | [LinkedIn](https://linkedin.com/in/orestis-z)\n\nDeep Learning, Computer Vision,<br>Software Engineering, Robotics",
 };
 
 export default [
