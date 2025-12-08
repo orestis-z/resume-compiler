@@ -109,7 +109,7 @@ export default [
     mini: true,
     children: [
       cvChild({
-        title: "[Shop Automation](https://orestis.ch/shop-automation)",
+        title: "[Shop Automation](https://orestis.ch/blog/automating-beach-rental-store)",
         date: "2023 - Present",
         body:
           "Self-service IoT system built using __Flask__, __Stripe__, __Shopify__, __RasPi__, __RS-485__.",
