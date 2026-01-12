@@ -39,7 +39,7 @@ export default [
         date: "Aug 2021 - Jul 2023",
         body: "* " + [
           "Optimized real-time detection pipeline, reduced latency by __24%__, VRAM by __45%__, and increased accuracy by __10%__.",
-          "Designed, prototyped, tuned, and deployed a face recognition system with a false-positive rate below __5%__.",
+          "Designed, prototyped, tuned, and deployed a face recognition system with a false discovery rate below __5%__.",
           "Drove real-time inference optimization efforts, __tripling__ the number of supported clients per hardware unit.",
           "Collaborated with the product team to prototype and experiment with CV/ML systems for novel user experiences.",
           "Technologies: __ROS__, __OpenCV__, __CUDA__, __PyTorch__, __TensorFlow__, __Docker__, __GitLab CI/CD__, __GCP__, __Python__, __C++__.",
