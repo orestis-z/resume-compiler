@@ -36,5 +36,4 @@ resumeCompiler({
   google: true,
   separator: " · ",
   separatorSec: " | ",
-  linkColor: "#0044CC"
 });

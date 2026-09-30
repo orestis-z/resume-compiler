@@ -115,7 +115,9 @@ resumeCompiler({
 | `fonts`               | Absolute path to font files (`ttf` or `woff`)                                                                       | Roboto and OpenSans |
 | `pageCountOn`         | Display page count                                                                                                  | `false`              |
 | `color`               | Font color                                                                                                          | `#212121`           |
-| `linkColor`           | Link font color                                                                                                     | `#212121`           |
+| `linkColor`           | Link font color                                                                                                     | font color (`#212121`) |
+| `linkDecoration`      | Link decoration (`'underline'`, `'line-through'`, or `null`)                                                        | `'underline'`       |
+| `linkDecorationStyle` | Link decoration style (`'dotted'`, `'solid'`, `'dashed'`, `'double'`, `'wavy'`)                                     | `'dotted'`          |
 | `mainTitleSize`       | Size of main document title                                                                                         | `24`                |
 | `subtitleSize`        | Size of main document subtitle                                                                                      | `12`                |
 | `headerSize`          | Size of the section headers                                                                                         | `13`                |

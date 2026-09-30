@@ -35,5 +35,4 @@ resumeCompiler({
   unbreakableChildren: true,
   google: true,
   separator: " · ",
-  linkColor: "#0044CC"
 });
