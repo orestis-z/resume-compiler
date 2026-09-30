@@ -20,7 +20,7 @@ export default [
         // body: "* " + [
         //   "",
         // ].join("\n* "),
-        body: "Maintaining [speculators](https://github.com/vllm-project/speculators) in the [vllm](https://github.com/vllm-project/vllm) ecosystem.",
+        body: "Core maintainer of [speculators](https://github.com/vllm-project/speculators) in the [vllm](https://github.com/vllm-project/vllm) ecosystem.",
       }),
       cvChild({
         title: "Senior ML Engineer / Tech Lead",
